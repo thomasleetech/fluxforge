@@ -7,7 +7,7 @@
 <meta name="description" content="Users don't care how it was built. They care how it feels. Sound, motion, and polish aren't decoration — they're functional UX tools. FluxForge Pillar 02.">
 <meta property="og:title" content="Feel Real — Pillar 02 | FluxForge">
 <meta property="og:description" content="Polish isn't optional — it's the product. Sound, motion, and micro-interactions from day one.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%A1</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z' fill='%23f0a830'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -134,23 +134,25 @@
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">&#9889;</div>
+      <div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg></div>
       <div class="nav-logo-text">FluxForge</div>
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html">FluxForge</a>
       <a href="methodology.html">Methodology</a>
       <a href="build-fast.html">Build Fast</a>
       <a href="feel-real.html" class="active">Feel Real</a>
       <a href="prove-outcomes.html">Prove Outcomes</a>
       <a href="harden.html">Harden</a>
-      <a href="case-studies.html">Case Studies</a>
+      <a href="case-studies.html">Showcases</a>
       <a href="ai-in-fluxforge.html">AI</a>
       <a href="when-to-use.html">When to Use</a>
       <a href="quick-start.html">Quick Start</a>
+      <a href="starter-kit.html">Starter Kit</a>
+      <a href="connect.html">Connect</a>
     </div>
   </div>
 </nav>
@@ -223,7 +225,7 @@
     <h3 class="reveal">The Four Categories of App Sound</h3>
 
     <div class="sound-category reveal">
-      <div class="sound-icon confirm">&#9989;</div>
+      <div class="sound-icon confirm"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
       <div class="sound-body">
         <h4>Confirmation Sounds</h4>
         <p>Short, satisfying sounds that confirm an action completed successfully. Button clicks, successful saves, form submissions, toggle switches. These are the most important category &mdash; they close the feedback loop. The user did something, and the app acknowledged it. Keep these under 100ms, crisp, and consistent.</p>
@@ -231,7 +233,7 @@
     </div>
 
     <div class="sound-category reveal">
-      <div class="sound-icon feedback">&#9888;&#65039;</div>
+      <div class="sound-icon feedback"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
       <div class="sound-body">
         <h4>Feedback Sounds</h4>
         <p>Sounds that communicate state changes or problems. Error tones, warning alerts, validation failures, undo confirmations. These need to be distinct from confirmation sounds &mdash; a different register, a different texture. Users should be able to tell from the sound alone whether something succeeded or failed without looking at the screen.</p>
@@ -239,7 +241,7 @@
     </div>
 
     <div class="sound-category reveal">
-      <div class="sound-icon ambient">&#127925;</div>
+      <div class="sound-icon ambient"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
       <div class="sound-body">
         <h4>Ambient Sounds</h4>
         <p>Subtle audio that creates atmosphere and spatial awareness. Page transition swooshes, background hum for focus modes, gentle chords for mode changes. These are the most optional category but can dramatically elevate an experience. Use sparingly &mdash; ambient sound should be felt more than heard.</p>
@@ -247,7 +249,7 @@
     </div>
 
     <div class="sound-category reveal">
-      <div class="sound-icon delight">&#10024;</div>
+      <div class="sound-icon delight"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/></svg></div>
       <div class="sound-body">
         <h4>Delight Sounds</h4>
         <p>Unexpected audio moments that create joy. Achievement unlocked fanfares, streak celebration sounds, Easter egg discoveries, milestone celebrations. These are rare by design &mdash; if every action is delightful, nothing is. Save them for genuine moments of accomplishment and surprise.</p>
@@ -519,40 +521,40 @@
 
     <h3 class="reveal">Visual Polish</h3>
     <div class="checklist-grid reveal">
-      <div class="checklist-item"><div class="check">&#10003;</div> Spacing is consistent (use a 4px/8px grid)</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Icons are aligned and consistently sized</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Color contrast meets WCAG AA (4.5:1 ratio)</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Typography scale is harmonious (no random sizes)</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Images are crisp (2x for retina displays)</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Dark mode has proper contrast, not just inverted colors</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Spacing is consistent (use a 4px/8px grid)</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Icons are aligned and consistently sized</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Color contrast meets WCAG AA (4.5:1 ratio)</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Typography scale is harmonious (no random sizes)</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Images are crisp (2x for retina displays)</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Dark mode has proper contrast, not just inverted colors</div>
     </div>
 
     <h3 class="reveal">Interaction Polish</h3>
     <div class="checklist-grid reveal">
-      <div class="checklist-item"><div class="check">&#10003;</div> Every button has a hover state</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Every interactive element has a focus state</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Clickable elements have cursor: pointer</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Transitions are smooth (no jumps or flickers)</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Sound cues confirm key actions</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Active/pressed states provide tactile feedback</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Every button has a hover state</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Every interactive element has a focus state</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Clickable elements have cursor: pointer</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Transitions are smooth (no jumps or flickers)</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Sound cues confirm key actions</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Active/pressed states provide tactile feedback</div>
     </div>
 
     <h3 class="reveal">State Polish</h3>
     <div class="checklist-grid reveal">
-      <div class="checklist-item"><div class="check">&#10003;</div> Loading states show skeleton or progress</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Error states are helpful, not just red text</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Empty states guide the user to take action</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Success states celebrate the completion</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Disabled states are visually distinct and explained</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Offline states degrade gracefully</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Loading states show skeleton or progress</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Error states are helpful, not just red text</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Empty states guide the user to take action</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Success states celebrate the completion</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Disabled states are visually distinct and explained</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Offline states degrade gracefully</div>
     </div>
 
     <h3 class="reveal">Content Polish</h3>
     <div class="checklist-grid reveal">
-      <div class="checklist-item"><div class="check">&#10003;</div> Micro-copy is human, not robotic</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Button labels are action verbs ("Save," not "Submit")</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Error messages explain what to do, not what went wrong</div>
-      <div class="checklist-item"><div class="check">&#10003;</div> Placeholder text is helpful, not lorem ipsum</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Micro-copy is human, not robotic</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Button labels are action verbs ("Save," not "Submit")</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Error messages explain what to do, not what went wrong</div>
+      <div class="checklist-item"><div class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div> Placeholder text is helpful, not lorem ipsum</div>
     </div>
 
     <div class="callout teal reveal">

@@ -7,7 +7,7 @@
 <meta name="description" content="Build fast, feel real, prove outcomes, harden into products. 200+ apps in 9 months. A rapid development methodology by Thomas Lee.">
 <meta property="og:title" content="FluxForge — Rapid Development Methodology">
 <meta property="og:description" content="200+ apps in 9 months. Build fast. Ship real. No framework bloat.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%A1</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z' fill='%23f0a830'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -49,10 +49,8 @@
     opacity: 0; animation: fadeIn 0.6s ease 0.2s forwards;
   }
   .logo-icon {
-    width: 40px; height: 40px; border-radius: 10px;
-    background: linear-gradient(135deg, var(--amber) 0%, var(--orange) 100%);
     display: flex; align-items: center; justify-content: center;
-    font-size: 20px; box-shadow: 0 4px 16px rgba(240,168,48,0.3);
+    color: var(--amber); filter: drop-shadow(0 0 8px rgba(240,168,48,0.5));
   }
   .logo-text {
     font-family: var(--mono); font-size: 16px; font-weight: 800; color: var(--amber);
@@ -241,7 +239,7 @@
   <div class="hero-glow"></div>
   <div class="hero-content">
     <div class="logo">
-      <div class="logo-icon">&#9889;</div>
+      <div class="logo-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg></div>
       <div class="logo-text">FluxForge</div>
     </div>
     <h1 class="hero-title">
@@ -253,25 +251,25 @@
       A rapid development methodology that turns ideas into production-quality applications at unprecedented speed. Created by <a href="https://thomaslee.tech" target="_blank">Thomas Lee</a>.
     </p>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="hero-stat-num">200+</div><div class="hero-stat-label">Apps Built</div></div>
-      <div class="hero-stat"><div class="hero-stat-num">9</div><div class="hero-stat-label">Months</div></div>
-      <div class="hero-stat"><div class="hero-stat-num">0</div><div class="hero-stat-label">Frameworks</div></div>
+      <div class="hero-stat"><div class="hero-stat-num" data-count="200" data-suffix="+">0</div><div class="hero-stat-label">Apps Built</div></div>
+      <div class="hero-stat"><div class="hero-stat-num" data-count="9">0</div><div class="hero-stat-label">Months</div></div>
+      <div class="hero-stat"><div class="hero-stat-num" data-count="0">0</div><div class="hero-stat-label">Frameworks</div></div>
     </div>
     <div class="hero-nav">
       <div class="hero-nav-label">Explore the Methodology</div>
       <div class="hero-nav-grid">
         <a href="methodology.html" class="hero-nav-card">
-          <span class="card-icon">&#128218;</span>
+          <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
           <div class="card-title">Full Overview</div>
           <div class="card-desc">The complete method</div>
         </a>
         <a href="quick-start.html" class="hero-nav-card">
-          <span class="card-icon">&#9889;</span>
+          <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg></span>
           <div class="card-title">Quick Start</div>
           <div class="card-desc">Build in 1 hour</div>
         </a>
         <a href="case-studies.html" class="hero-nav-card">
-          <span class="card-icon">&#128640;</span>
+          <span class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></span>
           <div class="card-title">Case Studies</div>
           <div class="card-desc">Real projects</div>
         </a>
@@ -279,6 +277,8 @@
     </div>
   </div>
 </section>
+
+<div class="gradient-bar"></div>
 
 <div class="philosophy">
   <div class="container">
@@ -325,17 +325,17 @@
     <div class="explore-label reveal">Go Deeper</div>
     <div class="explore-grid">
       <a href="ai-in-fluxforge.html" class="explore-card reveal">
-        <span class="card-icon">&#129302;</span>
+        <span class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><circle cx="8.5" cy="16" r="1.5"/><circle cx="15.5" cy="16" r="1.5"/></svg></span>
         <div class="card-title">AI in FluxForge</div>
         <div class="card-desc">How AI accelerates every phase of the build loop</div>
       </a>
       <a href="when-to-use.html" class="explore-card reveal">
-        <span class="card-icon">&#127919;</span>
+        <span class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
         <div class="card-title">When to Use It</div>
         <div class="card-desc">Where FluxForge shines and where it doesn't</div>
       </a>
       <a href="case-studies.html" class="explore-card reveal">
-        <span class="card-icon">&#128736;</span>
+        <span class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
         <div class="card-title">Case Studies</div>
         <div class="card-desc">Real projects built with FluxForge, from idea to ship</div>
       </a>
@@ -382,6 +382,31 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 reveals.forEach(el => observer.observe(el));
+
+// Animated counter
+function animateCounters() {
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const target = parseInt(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1200;
+    const start = performance.now();
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { animateCounters(); counterObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.3 });
+const statsEl = document.querySelector('.hero-stats');
+if (statsEl) counterObserver.observe(statsEl);
 </script>
 
 </body>
