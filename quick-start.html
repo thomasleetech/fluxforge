@@ -446,6 +446,20 @@ navLinks.querySelectorAll('a').forEach(link => {
     navLinks.classList.remove('open');
   });
 });
+
+// Progress tracker highlighting
+const stepLinks = document.querySelectorAll('[href^="#step-"]');
+const stepSections = document.querySelectorAll('[id^="step-"]');
+const progressObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      stepLinks.forEach(l => l.style.cssText = l.style.cssText.replace(/color:[^;]+;?/g, 'color:var(--text3);').replace(/border-color:[^;]+;?/g, 'border-color:var(--border);'));
+      const active = document.querySelector(`[href="#${e.target.id}"]`);
+      if (active) { active.style.color = 'var(--amber)'; active.style.borderColor = 'var(--amber)'; }
+    }
+  });
+}, { threshold: 0.3, rootMargin: '-80px 0px -60% 0px' });
+stepSections.forEach(s => progressObserver.observe(s));
 </script>
 
 </body>
