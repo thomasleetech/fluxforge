@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Start — Your First FluxForge Build</title>
+<meta name="description" content="A practical quick-start guide for the FluxForge methodology. From idea to working demo in under an hour. By Thomas Lee.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%A1</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ Site Navigation ============ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">&#9889;</div>
+      <div class="nav-logo-text">FluxForge</div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">FluxForge</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="build-fast.html">Build Fast</a>
+      <a href="feel-real.html">Feel Real</a>
+      <a href="prove-outcomes.html">Prove Outcomes</a>
+      <a href="harden.html">Harden</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="ai-in-fluxforge.html">AI in FluxForge</a>
+      <a href="when-to-use.html">When to Use</a>
+      <a href="quick-start.html" class="active">Quick Start</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ Page Header ============ -->
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">FluxForge</a> &rsaquo; Quick Start</div>
+    <h1>Your First <span class="accent">FluxForge</span> Build</h1>
+    <p class="subtitle">Follow this guide to build your first project using the FluxForge methodology. From idea to working demo in under an hour.</p>
+  </div>
+</header>
+
+<!-- ============ Before You Start ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Before You Start</h2>
+    <p class="reveal">Everything you need to get going. If you have a laptop and a browser, you&rsquo;re 90% there.</p>
+
+    <div class="card card-accent reveal">
+      <h3>Prerequisites</h3>
+      <ul>
+        <li><strong>A text editor</strong> &mdash; VS Code, VibePad, Sublime Text, even Notepad. Whatever you already have installed.</li>
+        <li><strong>A web browser</strong> &mdash; Chrome, Firefox, Safari, Edge. Any modern browser with dev tools.</li>
+        <li><strong>A local server</strong> &mdash; PHP&rsquo;s built-in server (<code style="font-family: var(--mono); font-size: 13px; color: var(--amber); background: rgba(240,168,48,0.08); padding: 2px 8px; border-radius: 4px;">php -S localhost:8000</code>), the Live Server VS Code extension, or Python&rsquo;s <code style="font-family: var(--mono); font-size: 13px; color: var(--amber); background: rgba(240,168,48,0.08); padding: 2px 8px; border-radius: 4px;">python -m http.server</code>.</li>
+        <li><strong>An AI assistant</strong> &mdash; Claude, ChatGPT, or similar. This is your co-pilot for generating scaffolds and solving problems fast.</li>
+        <li><strong>An idea</strong> &mdash; even a small one. A tool you wish existed. A game mechanic. A visualization. Something that excites you.</li>
+      </ul>
+    </div>
+
+    <div class="callout reveal">
+      <p>That&rsquo;s it. No npm. No frameworks. No config files. No build tools. If you spend more than 60 seconds on setup, you&rsquo;re doing it wrong.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Step 1: Define Your Movie Trailer ============ -->
+<section class="content-section">
+  <div class="container">
+    <div class="step-card reveal">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Define Your &ldquo;Movie Trailer&rdquo;</h3>
+        <p style="font-family: var(--mono); font-size: 13px; color: var(--text3);">5 minutes</p>
+      </div>
+    </div>
+
+    <p class="reveal">Before you write a single line of code, answer these four questions:</p>
+
+    <div class="card-grid">
+      <div class="card card-accent reveal">
+        <h3>The Visual Hook</h3>
+        <p>What does the user see first? This is the screenshot that sells your product. The moment someone lands on it and thinks &ldquo;I want to try this.&rdquo;</p>
+      </div>
+      <div class="card card-accent teal reveal">
+        <h3>The Interaction</h3>
+        <p>What happens in the first 5 seconds? What does the user tap, click, speak, or drag? The first interaction sets the tone for everything.</p>
+      </div>
+      <div class="card card-accent orange reveal">
+        <h3>The Feel</h3>
+        <p>What sound or motion confirms it works? A satisfying click, a smooth animation, a visual transformation. The feedback that says &ldquo;this is real.&rdquo;</p>
+      </div>
+      <div class="card card-accent olive reveal">
+        <h3>The Shareability</h3>
+        <p>Why would someone show this to a friend? If you can&rsquo;t answer this, your idea might be useful but it won&rsquo;t spread. Make it worth sharing.</p>
+      </div>
+    </div>
+
+    <p class="reveal">Now write it down in one sentence. This is your North Star for the next hour.</p>
+
+    <div class="callout teal reveal">
+      <p><strong>Example:</strong> &ldquo;A user speaks into their mic and sees their words appear as animated text on screen in real-time.&rdquo;</p>
+      <div class="attribution">&mdash; One sentence. One vision. Everything you build serves this moment.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Step 2: Build the Vertical Slice ============ -->
+<section class="content-section">
+  <div class="container">
+    <div class="step-card reveal">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Build the Vertical Slice</h3>
+        <p style="font-family: var(--mono); font-size: 13px; color: var(--text3);">25 minutes</p>
+      </div>
+    </div>
+
+    <p class="reveal">Create a single HTML file. Yes, <strong>everything in one file</strong> &mdash; HTML, CSS, and JavaScript together. This is intentional. One file means zero friction, instant deployment, and complete visibility into what&rsquo;s happening.</p>
+
+    <h3 class="reveal">The FluxForge Single-File Structure</h3>
+
+    <div class="code-block reveal">
+<span class="comment">&lt;!DOCTYPE html&gt;</span><br>
+<span class="comment">&lt;html&gt;</span><br>
+<span class="comment">&lt;head&gt;</span><br>
+&nbsp;&nbsp;&lt;meta charset=<span class="highlight">"UTF-8"</span>&gt;<br>
+&nbsp;&nbsp;&lt;meta name=<span class="highlight">"viewport"</span> content=<span class="highlight">"width=device-width, initial-scale=1.0"</span>&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;<span class="highlight">My FluxForge Project</span>&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;style&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Your styles here &mdash; dark theme, clean layout */</span><br>
+&nbsp;&nbsp;&lt;/style&gt;<br>
+<span class="comment">&lt;/head&gt;</span><br>
+<span class="comment">&lt;body&gt;</span><br>
+<br>
+&nbsp;&nbsp;<span class="comment">&lt;!-- Your UI here &mdash; start with the "trailer" view --&gt;</span><br>
+<br>
+&nbsp;&nbsp;&lt;script&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Your logic here &mdash; make it work end-to-end</span><br>
+&nbsp;&nbsp;&lt;/script&gt;<br>
+<span class="comment">&lt;/body&gt;</span><br>
+<span class="comment">&lt;/html&gt;</span>
+    </div>
+
+    <h3 class="reveal">Key Rules</h3>
+
+    <div class="card-grid">
+      <div class="card card-accent reveal">
+        <h3>Mobile-First</h3>
+        <p>Start with a 375px viewport in mind. Open your browser&rsquo;s device toolbar and design for the smallest screen first. Desktop is the easy expansion &mdash; mobile is where the constraints live.</p>
+      </div>
+      <div class="card card-accent teal reveal">
+        <h3>One Complete Flow</h3>
+        <p>Input &rarr; Process &rarr; Output. Don&rsquo;t build half of two features. Build all of one feature. A user should be able to do one real, complete thing with your app.</p>
+      </div>
+      <div class="card card-accent orange reveal">
+        <h3>AI-Assisted Scaffolding</h3>
+        <p>Use your AI assistant to generate the initial scaffold, then refine. Describe your movie trailer sentence and ask for a working single-file HTML implementation. Then iterate on what it gives you.</p>
+      </div>
+      <div class="card card-accent olive reveal">
+        <h3>Don&rsquo;t Organize Yet</h3>
+        <p>Don&rsquo;t worry about code structure, file splitting, or architecture. That&rsquo;s the <a href="harden.html">Harden</a> phase. Right now, your only job is to make it <em>work</em>.</p>
+      </div>
+    </div>
+
+    <div class="callout orange reveal">
+      <p><strong>Test in the browser every 5 minutes.</strong> Save, refresh, see what changed. If you go more than 5 minutes without checking the browser, you&rsquo;re building blind. The browser is your source of truth, not your editor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Step 3: Make It Feel Real ============ -->
+<section class="content-section">
+  <div class="container">
+    <div class="step-card reveal">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Make It Feel Real</h3>
+        <p style="font-family: var(--mono); font-size: 13px; color: var(--text3);">15 minutes</p>
+      </div>
+    </div>
+
+    <p class="reveal">The polish pass. This is what separates FluxForge from &ldquo;just a prototype.&rdquo; You&rsquo;re not adding features &mdash; you&rsquo;re adding <em>feeling</em>.</p>
+
+    <div class="reveal">
+      <ul>
+        <li><strong>Add a CSS transition</strong> to your main interaction &mdash; 200&ndash;300ms ease-out. Buttons should respond. Elements should glide, not jump.</li>
+        <li><strong>Add a subtle background</strong> &mdash; a dark gradient or slight color shift. Dark themes feel premium. Try <code style="font-family: var(--mono); font-size: 13px; color: var(--amber); background: rgba(240,168,48,0.08); padding: 2px 8px; border-radius: 4px;">background: linear-gradient(135deg, #1a1a2e, #16213e)</code>.</li>
+        <li><strong>Add at least one sound cue</strong> &mdash; a button click, a success chime, a notification tone. Sound is the fastest way to make something feel alive.</li>
+        <li><strong>Ensure touch targets are at least 44px</strong> &mdash; if someone can&rsquo;t tap it on a phone, it doesn&rsquo;t exist.</li>
+        <li><strong>Add a loading state</strong> if anything is async &mdash; a spinner, a skeleton, a progress bar. Users should never wonder &ldquo;is it broken or loading?&rdquo;</li>
+        <li><strong>Test on your phone</strong> &mdash; use your browser&rsquo;s device toolbar, or better yet, open it on your actual phone via your local IP.</li>
+      </ul>
+    </div>
+
+    <h3 class="reveal">Adding a Click Sound with Web Audio API</h3>
+    <p class="reveal">No external files needed. This creates a short, satisfying click sound entirely in JavaScript:</p>
+
+    <div class="code-block reveal">
+<span class="comment">// Create a reusable click sound function</span><br>
+<span class="highlight">function playClick()</span> {<br>
+&nbsp;&nbsp;const ctx = new (window.AudioContext || window.webkitAudioContext)();<br>
+&nbsp;&nbsp;const oscillator = ctx.createOscillator();<br>
+&nbsp;&nbsp;const gain = ctx.createGain();<br>
+<br>
+&nbsp;&nbsp;oscillator.connect(gain);<br>
+&nbsp;&nbsp;gain.connect(ctx.destination);<br>
+<br>
+&nbsp;&nbsp;oscillator.frequency.setValueAtTime(<span class="highlight">800</span>, ctx.currentTime);<br>
+&nbsp;&nbsp;oscillator.frequency.exponentialRampToValueAtTime(<span class="highlight">400</span>, ctx.currentTime + <span class="highlight">0.08</span>);<br>
+<br>
+&nbsp;&nbsp;gain.gain.setValueAtTime(<span class="highlight">0.3</span>, ctx.currentTime);<br>
+&nbsp;&nbsp;gain.gain.exponentialRampToValueAtTime(<span class="highlight">0.01</span>, ctx.currentTime + <span class="highlight">0.1</span>);<br>
+<br>
+&nbsp;&nbsp;oscillator.start(ctx.currentTime);<br>
+&nbsp;&nbsp;oscillator.stop(ctx.currentTime + <span class="highlight">0.1</span>);<br>
+}<br>
+<br>
+<span class="comment">// Attach to any button</span><br>
+document.querySelector(<span class="highlight">'.my-button'</span>).addEventListener(<span class="highlight">'click'</span>, () =&gt; {<br>
+&nbsp;&nbsp;playClick();<br>
+&nbsp;&nbsp;<span class="comment">// ... your button logic</span><br>
+});
+    </div>
+
+    <div class="callout reveal">
+      <p>The difference between a prototype and a product is 15 minutes of polish. Transitions, sound, and loading states tell the user &ldquo;someone cared about this.&rdquo; That trust is what makes people come back.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Step 4: Test with One Real Person ============ -->
+<section class="content-section">
+  <div class="container">
+    <div class="step-card reveal">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>Test with One Real Person</h3>
+        <p style="font-family: var(--mono); font-size: 13px; color: var(--text3);">10 minutes</p>
+      </div>
+    </div>
+
+    <p class="reveal">Share your build with someone &mdash; a friend, a colleague, a family member. Hand them your phone or send them the URL. Then do the hardest thing in product development: <strong>watch them use it without saying a word.</strong></p>
+
+    <p class="reveal">Don&rsquo;t explain how it works. Don&rsquo;t point at the button they should tap. Don&rsquo;t preface it with &ldquo;it&rsquo;s still rough.&rdquo; Just watch.</p>
+
+    <h3 class="reveal">What to Look For</h3>
+
+    <div class="card-grid">
+      <div class="card card-accent teal reveal">
+        <h3>Hesitation Points</h3>
+        <p>Where do they pause? Where does their finger hover before tapping? Hesitation means confusion, and confusion means your UI isn&rsquo;t communicating clearly enough.</p>
+      </div>
+      <div class="card card-accent reveal">
+        <h3>First Instinct</h3>
+        <p>What do they tap or click first? This tells you what your design is <em>actually</em> communicating, which is often different from what you intended.</p>
+      </div>
+      <div class="card card-accent orange reveal">
+        <h3>5-Second Comprehension</h3>
+        <p>Do they understand the purpose within 5 seconds? If they have to ask &ldquo;what does this do?&rdquo; your movie trailer isn&rsquo;t clear enough.</p>
+      </div>
+      <div class="card card-accent olive reveal">
+        <h3>Confusion Zones</h3>
+        <p>Where do they get lost? Where do they try something that doesn&rsquo;t work? Every confusion point is a gift &mdash; it&rsquo;s telling you exactly what to fix.</p>
+      </div>
+    </div>
+
+    <div class="callout teal reveal">
+      <p>This is your first &ldquo;<a href="prove-outcomes.html">Prove Outcomes</a>&rdquo; cycle. Write down what you observed. Not what they said &mdash; what they <em>did</em>. Behavior is truth. Opinions are noise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Step 5: Fix the Top Friction Point ============ -->
+<section class="content-section">
+  <div class="container">
+    <div class="step-card reveal">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h3>Fix the Top Friction Point</h3>
+        <p style="font-family: var(--mono); font-size: 13px; color: var(--text3);">5 minutes</p>
+      </div>
+    </div>
+
+    <p class="reveal">Based on your observation, fix the <strong>single biggest issue</strong>. Not all of them &mdash; just the one that matters most. The one where the user visibly struggled. The one that broke the flow of your movie trailer moment.</p>
+
+    <div class="do-dont reveal">
+      <div class="do-col">
+        <h4>Do This</h4>
+        <ul>
+          <li>Fix the #1 friction point you observed</li>
+          <li>Make the fix small and testable</li>
+          <li>Re-test with the same person if possible</li>
+          <li>Move on to the next iteration</li>
+        </ul>
+      </div>
+      <div class="dont-col">
+        <h4>Not This</h4>
+        <ul>
+          <li>Try to fix every issue at once</li>
+          <li>Rewrite the entire codebase</li>
+          <li>Add new features before fixing existing pain</li>
+          <li>Assume you know the fix without testing it</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="reveal">This is the FluxForge iteration loop at its core: <strong>build, observe, fix, repeat.</strong> You&rsquo;ll run this cycle many times. Each pass, the product gets sharper, tighter, and more inevitable.</p>
+  </div>
+</section>
+
+<!-- ============ What's Next ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">What&rsquo;s Next</h2>
+    <p class="reveal">You now have a working FluxForge prototype &mdash; built in under an hour, tested with a real person, and improved based on real feedback. That&rsquo;s more than most projects achieve in a week of planning meetings.</p>
+
+    <p class="reveal">Here&rsquo;s where to go from here:</p>
+
+    <div class="card-grid">
+      <div class="card card-accent reveal">
+        <h3>Iterate</h3>
+        <p>Run the build loop again &mdash; Hook &rarr; Slice &rarr; Polish &rarr; Test &rarr; Fix. Each cycle makes it better. You&rsquo;ll be surprised how fast it converges on something great.</p>
+      </div>
+      <div class="card card-accent teal reveal">
+        <h3>Expand</h3>
+        <p>Add more features, one vertical slice at a time. Don&rsquo;t build horizontally (a little of everything) &mdash; build vertically (all of one thing) before moving to the next.</p>
+      </div>
+      <div class="card card-accent orange reveal">
+        <h3>Harden</h3>
+        <p>When people keep coming back, it&rsquo;s time to <a href="harden.html">harden</a>. Add authentication, error handling, security headers, and admin tools. Earn the right to scale.</p>
+      </div>
+      <div class="card card-accent olive reveal">
+        <h3>Read the Pillars</h3>
+        <p>Deep dive into each phase of the methodology. Understand the principles behind the process, not just the steps.</p>
+      </div>
+    </div>
+
+    <div class="pill-row reveal" style="justify-content: center; margin-top: 24px;">
+      <a href="build-fast.html" class="pill pill-orange" style="cursor: pointer;">01 Build Fast</a>
+      <a href="feel-real.html" class="pill pill-amber" style="cursor: pointer;">02 Feel Real</a>
+      <a href="prove-outcomes.html" class="pill pill-olive" style="cursor: pointer;">03 Prove Outcomes</a>
+      <a href="harden.html" class="pill pill-red" style="cursor: pointer;">04 Harden</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ The FluxForge Cheat Sheet ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">The FluxForge Cheat Sheet</h2>
+    <p class="reveal">A compact reference you can keep open during builds. This is the entire methodology in seven lines.</p>
+
+    <div class="code-block reveal">
+<span class="comment">// The FluxForge Build Loop</span><br>
+<span class="comment">// Pin this. Reference it. Repeat it.</span><br>
+<br>
+<span class="highlight">1. Movie Trailer</span>&nbsp;&nbsp;&nbsp;&nbsp;&rarr; Define the 5-second hook<br>
+<span class="highlight">2. Vertical Slice</span>&nbsp;&nbsp;&nbsp;&rarr; Build one complete path (UI &rarr; Logic &rarr; Data &rarr; Output)<br>
+<span class="highlight">3. Touch-First</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; Start mobile, expand to desktop<br>
+<span class="highlight">4. Sound + Motion</span>&nbsp;&nbsp;&nbsp;&rarr; Add one sound cue, one animation<br>
+<span class="highlight">5. Ship + Observe</span>&nbsp;&nbsp;&nbsp;&rarr; Share it, watch someone use it<br>
+<span class="highlight">6. Fix + Iterate</span>&nbsp;&nbsp;&nbsp;&nbsp;&rarr; Fix the #1 friction point<br>
+<span class="highlight">7. Repeat</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rarr; Run the loop until it feels inevitable
+    </div>
+
+    <div class="callout reveal" style="text-align: center;">
+      <p style="font-family: var(--bitter); font-size: 20px; font-weight: 800; color: var(--cream); margin-bottom: 0;">One hour. One file. One working demo. That&rsquo;s FluxForge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Pillar Navigation ============ -->
+<section class="content-section" style="border-bottom: none;">
+  <div class="container">
+    <div class="pillar-nav reveal">
+      <a href="when-to-use.html">
+        <span class="nav-label">&larr; Previous</span>
+        <span class="nav-title">When to Use FluxForge</span>
+      </a>
+      <a href="methodology.html" class="next">
+        <span class="nav-label">Overview &rarr;</span>
+        <span class="nav-title">Full Methodology</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://thomaslee.tech" target="_blank">thomaslee.tech</a>
+      <a href="https://linkedin.com/in/thomas-lee-dev" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/TommyLeeDev" target="_blank">X / Twitter</a>
+    </div>
+    <div>&copy; 2025 Thomas Lee</div>
+    <div class="footer-tagline">FluxForge is a development methodology, not a framework. That's the point.</div>
+  </div>
+</footer>
+
+<!-- ============ Scripts ============ -->
+<script>
+// Reveal-on-scroll animation
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 100);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
+
+// Hamburger toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+// Close nav when clicking a link (mobile)
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
