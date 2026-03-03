@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pillar 04: Harden Into Products — FluxForge</title>
+<meta name="description" content="Once proven, lock the foundations. Auth, payments, admin dashboards, edge cases. This is where prototypes become products.">
+<meta property="og:title" content="Pillar 04: Harden Into Products — FluxForge">
+<meta property="og:description" content="Once proven, lock the foundations. Auth, payments, admin dashboards, edge cases. This is where prototypes become products.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%A1</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ====== Navigation ====== -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">&#9889;</div>
+      <div class="nav-logo-text">FluxForge</div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="methodology.html">Methodology</a>
+      <a href="build-fast.html">Build Fast</a>
+      <a href="feel-real.html">Feel Real</a>
+      <a href="prove-outcomes.html">Prove Outcomes</a>
+      <a href="harden.html" class="active">Harden</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="ai-in-fluxforge.html">AI</a>
+      <a href="when-to-use.html">When to Use</a>
+      <a href="quick-start.html">Quick Start</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== Page Header ====== -->
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">FluxForge</a> &nbsp;&rsaquo;&nbsp; <a href="methodology.html">Pillars</a> &nbsp;&rsaquo;&nbsp; Harden
+    </div>
+    <h1><span class="accent">04</span> &mdash; Harden Into Products</h1>
+    <p class="subtitle">Once proven, lock the foundations. Auth, payments, admin dashboards, edge cases. This is where prototypes become products.</p>
+  </div>
+</header>
+
+<!-- ====== Earning the Right to Harden ====== -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Earning the Right to Harden</h2>
+    <p class="reveal">Not everything deserves hardening. A prototype must prove itself through Pillars 01&ndash;03 before it earns investment in production-grade infrastructure. Most projects die before they get here &mdash; and that's fine. The entire point of building fast and proving outcomes is to identify which ideas are worth the engineering effort of hardening.</p>
+    <p class="reveal">Hardening too early is premature optimization. You'll spend weeks building auth flows, admin dashboards, and payment integrations for a product nobody wants. Hardening too late creates technical debt that's hard to unwind &mdash; spaghetti code baked into a system that users already depend on.</p>
+
+    <div class="callout reveal">
+      <p>The sweet spot: when users demonstrate real, repeated behavior and the feedback loop generates feature requests instead of confusion.</p>
+    </div>
+
+    <p class="reveal">When users stop asking "what does this do?" and start asking "can it also do X?" &mdash; that's when you know you've earned the right to harden. The product has proven its value. Now it needs the infrastructure to sustain it.</p>
+
+    <div class="do-dont reveal">
+      <div class="do-col">
+        <h4>&#10003; Signs You're Ready</h4>
+        <ul>
+          <li><strong>Repeat usage</strong> &mdash; users come back without prompting</li>
+          <li><strong>Feature requests</strong> &mdash; feedback shifts from confusion to expansion</li>
+          <li><strong>Real data</strong> &mdash; users are entering data they care about</li>
+          <li><strong>Monetization signal</strong> &mdash; someone asks "can I pay for this?"</li>
+        </ul>
+      </div>
+      <div class="dont-col">
+        <h4>&#10007; Signs You're Not</h4>
+        <ul>
+          <li><span>Only the builder has used it</span></li>
+          <li><span>Feedback is mostly confusion or "I don't get it"</span></li>
+          <li><span>No repeat visits without prompting</span></li>
+          <li><span>The core loop isn't clear yet</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Security First Pass ====== -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Security First Pass</h2>
+    <p class="reveal">Security is the non-negotiable baseline. Even before full hardening, any prototype that touches user data needs a minimum security floor. The question isn't whether to do security &mdash; it's how much to do at each stage.</p>
+
+    <h3 class="reveal">The Non-Negotiable Baseline</h3>
+    <div class="card-grid reveal">
+      <div class="card card-accent red">
+        <h3>Input Validation</h3>
+        <p>Validate and sanitize all user input on the server side. Never trust the client. Whitelist expected formats, reject everything else.</p>
+      </div>
+      <div class="card card-accent red">
+        <h3>SQL Parameterization</h3>
+        <p>Every database query uses parameterized statements. No exceptions. No string concatenation. This is non-negotiable from line one.</p>
+      </div>
+      <div class="card card-accent red">
+        <h3>XSS Prevention</h3>
+        <p>Escape all user-generated output. Use <code>htmlspecialchars()</code> in PHP, DOM text nodes in JS. Never inject raw user content into HTML.</p>
+      </div>
+      <div class="card card-accent red">
+        <h3>CSRF Tokens</h3>
+        <p>Every state-changing request includes a CSRF token. Generate per-session, validate server-side. Prevents cross-site request forgery attacks.</p>
+      </div>
+    </div>
+
+    <h3 class="reveal">The FluxForge Approach</h3>
+    <p class="reveal">Start with safe defaults from day one. Parameterized queries and escaped output aren't hardening steps &mdash; they're table stakes. You should never write a raw SQL query, even in a prototype.</p>
+    <p class="reveal">Then, during the hardening phase, layer on the rest:</p>
+    <ul class="reveal">
+      <li><strong>CSP headers</strong> &mdash; Content Security Policy to prevent inline script injection. No inline scripts or styles when CSP requires it.</li>
+      <li><strong>Strict transport headers</strong> &mdash; HSTS, X-Frame-Options, X-Content-Type-Options.</li>
+      <li><strong>Permission gating</strong> &mdash; tighter role-based access, principle of least privilege.</li>
+      <li><strong>HTTPS everywhere</strong> &mdash; no exceptions, even for internal tools.</li>
+      <li><strong>CSP-safe assets</strong> &mdash; external stylesheets, nonce-based scripts, no eval().</li>
+    </ul>
+
+    <div class="code-block reveal">
+      <span class="comment">// Day-one safe defaults (always do this)</span><br>
+      <span class="highlight">$stmt</span> = $pdo-&gt;prepare("SELECT * FROM users WHERE email = <span class="highlight">?</span>");<br>
+      <span class="highlight">$stmt</span>-&gt;execute([$email]);<br>
+      <br>
+      <span class="comment">// Escaped output (always do this)</span><br>
+      echo <span class="highlight">htmlspecialchars</span>($user['name'], ENT_QUOTES, 'UTF-8');<br>
+      <br>
+      <span class="comment">// Hardening phase: add CSP headers</span><br>
+      header("Content-Security-Policy: default-src 'self'; script-src 'self'");<br>
+      header("X-Content-Type-Options: nosniff");<br>
+      header("X-Frame-Options: DENY");
+    </div>
+  </div>
+</section>
+
+<!-- ====== Authentication and Authorization ====== -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Authentication and Authorization</h2>
+    <p class="reveal">User management is one of the biggest time sinks in software development. Registration, login, sessions, password reset, email verification, OAuth &mdash; it's a mountain of work that has nothing to do with your product's core value. That's why FluxForge delays it.</p>
+
+    <h3 class="reveal">The Graduation Path</h3>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="time">Prototype Phase</div>
+        <h4>No Auth / Invite Codes</h4>
+        <p>Start with no auth at all, or use simple invite codes (like InviteGate). Share a link, paste a code, you're in. Zero infrastructure, instant access for testers.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="time">Validation Phase</div>
+        <h4>Basic Session Auth</h4>
+        <p>When users need persistent data, add simple login. Email and password, server-side sessions, bcrypt hashing. No OAuth, no social login, no magic links &mdash; just the basics.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="time">Hardening Phase</div>
+        <h4>Full Auth System</h4>
+        <p>Registration with email verification, password reset flows, session management, remember-me tokens, account lockout after failed attempts. The works.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="time">Scale Phase</div>
+        <h4>Role-Based Access + API Auth</h4>
+        <p>Admin vs. user vs. guest roles. Token-based auth for APIs. OAuth if third-party integrations demand it. Permission matrices. Audit logs.</p>
+      </div>
+    </div>
+
+    <div class="callout teal reveal">
+      <p>Don't build user management for a prototype nobody uses yet. The fastest way to waste a week is to build a password reset flow for an app with zero users.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Admin and Operations ====== -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Admin and Operations</h2>
+    <p class="reveal">The ops layer is invisible to users but essential for running a product. Without it, you're flying blind &mdash; unable to see what users are doing, fix issues, or manage the system. Admin tools are the cockpit of your application.</p>
+
+    <h3 class="reveal">What You Need</h3>
+    <div class="card-grid reveal">
+      <div class="card card-accent teal">
+        <h3>Admin Dashboard</h3>
+        <p>A single page that shows system health at a glance: active users, recent signups, error rates, key metrics. Simple tables and counters, not fancy charts.</p>
+      </div>
+      <div class="card card-accent teal">
+        <h3>User Management</h3>
+        <p>View user accounts, reset passwords, toggle roles, disable accounts. The ability to act on behalf of a user for debugging. Essential for support.</p>
+      </div>
+      <div class="card card-accent olive">
+        <h3>Analytics Views</h3>
+        <p>Page views, feature usage, conversion funnels. Start with simple server-side logging and SQL queries. Graduate to proper analytics tools when scale demands it.</p>
+      </div>
+      <div class="card card-accent olive">
+        <h3>Moderation Tools</h3>
+        <p>Content review queues, flag/ban workflows, audit trails. If users generate content, you need the ability to review and remove it.</p>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div>
+        <h3>Logging and Monitoring</h3>
+        <p>Log every error, every failed login, every external API call. Include timestamps, user IDs, and request context. You can't debug what you can't see.</p>
+        <p>Start with file-based logging. Graduate to centralized logging (ELK, CloudWatch) when the volume demands it. But start logging from day one of hardening.</p>
+      </div>
+      <div>
+        <h3>The FluxForge Approach</h3>
+        <p>Build admin tools as simple, functional pages. They don't need to be pretty &mdash; they need to give you control. A plain HTML table with action buttons beats a polished dashboard that took two weeks to build.</p>
+        <p>Admin pages are internal tools. Optimize for speed of development and clarity of information, not visual polish. Save the design effort for user-facing features.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== The MVP to V3 Roadmap ====== -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">The MVP to V3 Roadmap</h2>
+    <p class="reveal">A FluxForge project doesn't jump from prototype to production in one leap. It evolves through distinct phases, each earning the next. This roadmap keeps you from over-engineering early and under-engineering late.</p>
+
+    <div class="step-card reveal">
+      <div class="step-num">V1</div>
+      <div class="step-content">
+        <h3>MVP &mdash; Prove the Concept</h3>
+        <p>Single-file build (or minimal files). Working core flow. Basic visual polish. Deployed and shareable. The goal: does this idea work? Can someone use it without you explaining it? Ship in hours or days, not weeks.</p>
+      </div>
+    </div>
+
+    <div class="step-card reveal">
+      <div class="step-num">V2</div>
+      <div class="step-content">
+        <h3>Refinement &mdash; Make It Real</h3>
+        <p>Multi-file refactor: separate concerns, extract components, clean up the database schema. Performance optimization. Analytics and basic admin tools. Error handling for all external calls. This is where the codebase becomes maintainable.</p>
+      </div>
+    </div>
+
+    <div class="step-card reveal">
+      <div class="step-num">V3</div>
+      <div class="step-content">
+        <h3>Scale &mdash; Make It Last</h3>
+        <p>Monetization hooks (payments, subscriptions, usage limits). Multi-user support with proper auth and roles. Scaling infrastructure (caching, CDN, database optimization). Safety rails (rate limiting, abuse prevention, data backups). This is the production-grade phase.</p>
+      </div>
+    </div>
+
+    <div class="callout orange reveal">
+      <p>Each phase earns the next. Don't jump to V3 architecture on day one. A perfectly architected system that nobody uses is worse than a scrappy MVP that solves a real problem.</p>
+    </div>
+
+    <div class="pill-row reveal">
+      <span class="pill pill-amber">MVP: Hours</span>
+      <span class="pill pill-orange">V2: Days</span>
+      <span class="pill pill-red">V3: Weeks</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Hardening Checklist ====== -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Hardening Checklist</h2>
+    <p class="reveal">A practical checklist for taking a proven prototype to production. Not everything applies to every project, but everything here should be consciously considered.</p>
+
+    <div class="two-col">
+      <div class="reveal">
+        <h3>Security</h3>
+        <ul>
+          <li><strong>Input validation</strong> on all user-submitted data</li>
+          <li><strong>SQL injection prevention</strong> &mdash; parameterized queries everywhere</li>
+          <li><strong>XSS prevention</strong> &mdash; escaped output, no raw HTML injection</li>
+          <li><strong>CSRF protection</strong> &mdash; tokens on all state-changing requests</li>
+          <li><strong>CSP headers</strong> &mdash; Content Security Policy configured</li>
+          <li><strong>Rate limiting</strong> &mdash; prevent abuse on auth and API endpoints</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>Reliability</h3>
+        <ul>
+          <li><strong>Error handling</strong> for all external API calls</li>
+          <li><strong>Graceful degradation</strong> &mdash; app works when services fail</li>
+          <li><strong>Database backups</strong> &mdash; automated, tested, restorable</li>
+          <li><strong>Logging and monitoring</strong> &mdash; errors, auth events, key actions</li>
+          <li><strong>Deployment automation</strong> &mdash; repeatable, scripted deploys</li>
+          <li><strong>Cleanup scripts</strong> &mdash; temp files, expired sessions, stale data</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="reveal">
+        <h3>Edge Cases</h3>
+        <ul>
+          <li><strong>Mobile edge cases</strong> &mdash; touch targets, viewport quirks, keyboard behavior</li>
+          <li><strong>Offline states</strong> &mdash; what happens when the network drops?</li>
+          <li><strong>Empty states</strong> &mdash; what does a new user see with zero data?</li>
+          <li><strong>Boundary inputs</strong> &mdash; very long strings, special characters, zero values</li>
+          <li><strong>Concurrent access</strong> &mdash; two users editing the same resource</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>Operations</h3>
+        <ul>
+          <li><strong>Admin dashboard</strong> &mdash; system health at a glance</li>
+          <li><strong>User management</strong> &mdash; view, edit, disable accounts</li>
+          <li><strong>Analytics</strong> &mdash; usage patterns, conversion metrics</li>
+          <li><strong>Moderation tools</strong> &mdash; if users generate content</li>
+          <li><strong>Health checks</strong> &mdash; automated uptime monitoring</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      <p><em>"A product isn't hardened when it handles the happy path. It's hardened when it handles everything else."</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Pillar Navigation ====== -->
+<section class="content-section">
+  <div class="container">
+    <div class="pillar-nav reveal">
+      <a href="prove-outcomes.html">
+        <span class="nav-label">&larr; Previous Pillar</span>
+        <span class="nav-title">03: Prove Outcomes</span>
+      </a>
+      <a href="case-studies.html" class="next">
+        <span class="nav-label">Up Next &rarr;</span>
+        <span class="nav-title">Case Studies</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Footer ====== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://thomaslee.tech" target="_blank">thomaslee.tech</a>
+      <a href="https://linkedin.com/in/thomas-lee-dev" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/TommyLeeDev" target="_blank">X / Twitter</a>
+    </div>
+    <div>&copy; 2025 Thomas Lee</div>
+    <div class="footer-tagline">FluxForge is a development methodology, not a framework. That's the point.</div>
+  </div>
+</footer>
+
+<!-- ====== Scripts ====== -->
+<script>
+// Reveal animations on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 100);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
+
+// Mobile hamburger toggle
+const toggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+// Close nav when a link is clicked (mobile)
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
