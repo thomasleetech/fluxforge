@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When to Use FluxForge — Know the Boundaries</title>
+<meta name="description" content="When to use FluxForge and when not to. Every methodology has limits — knowing yours is part of the method. By Thomas Lee.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%A1</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ Site Navigation ============ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">&#9889;</div>
+      <div class="nav-logo-text">FluxForge</div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">FluxForge</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="build-fast.html">Build Fast</a>
+      <a href="feel-real.html">Feel Real</a>
+      <a href="prove-outcomes.html">Prove Outcomes</a>
+      <a href="harden.html">Harden</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="ai-in-fluxforge.html">AI in FluxForge</a>
+      <a href="when-to-use.html" class="active">When to Use</a>
+      <a href="quick-start.html">Quick Start</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ Page Header ============ -->
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">FluxForge</a> &rsaquo; When to Use</div>
+    <h1>When to Use <span class="accent">FluxForge</span></h1>
+    <p class="subtitle">Every methodology has boundaries. Knowing when to use FluxForge &mdash; and when not to &mdash; is part of the method.</p>
+  </div>
+</header>
+
+<!-- ============ FluxForge Shines When... ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">FluxForge Shines When&hellip;</h2>
+    <p class="reveal">These are the scenarios where FluxForge delivers its best results &mdash; where speed, polish, and pragmatism matter more than ceremony.</p>
+
+    <div class="card-grid">
+      <div class="card card-accent reveal">
+        <h3>Solo Developers or Tiny Teams (1&ndash;3 People)</h3>
+        <p>The methodology is optimized for small, fast-moving teams. No handoff overhead, no approval chains. One person can own the full stack and ship a complete experience in a single session.</p>
+      </div>
+
+      <div class="card card-accent teal reveal">
+        <h3>Exploring New Ideas</h3>
+        <p>When you don't know if the idea is viable. FluxForge lets you test ideas in hours instead of months. Build the thing, show it to someone, and find out if it matters &mdash; before investing in architecture.</p>
+      </div>
+
+      <div class="card card-accent orange reveal">
+        <h3>Client Demos and Prototypes</h3>
+        <p>When you need to show something real, fast. A working demo beats a slide deck every time. Clients don't evaluate mockups the same way they evaluate software they can touch.</p>
+      </div>
+
+      <div class="card card-accent olive reveal">
+        <h3>Hackathons and Competitions</h3>
+        <p>Speed + polish is the winning formula. FluxForge is built for time-constrained building. When you have 48 hours and need to ship something that looks and works like a real product, this is the methodology.</p>
+      </div>
+
+      <div class="card card-accent reveal">
+        <h3>Portfolio Projects</h3>
+        <p>When you want to showcase what you can build. FluxForge projects look and feel like real products &mdash; because they are. Sound, motion, real data, and polished UI from day one.</p>
+      </div>
+
+      <div class="card card-accent teal reveal">
+        <h3>Internal Tools</h3>
+        <p>Tools that need to work but don't need enterprise architecture. Admin dashboards, testing utilities, data visualization tools. Ship something useful this week instead of planning it for six months.</p>
+      </div>
+
+      <div class="card card-accent orange reveal">
+        <h3>AI-Integrated Applications</h3>
+        <p>When the product uses AI APIs &mdash; voice, vision, chat. FluxForge's pragmatic stack integrates AI quickly. Vanilla JS talks to REST endpoints that talk to OpenAI, Anthropic, or ElevenLabs with zero framework overhead.</p>
+      </div>
+
+      <div class="card card-accent olive reveal">
+        <h3>Consumer-Facing MVPs</h3>
+        <p>When you need to test market demand before investing in infrastructure. Build the product, put it in front of real users, measure what happens. Let the market tell you what to invest in next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Think Twice When... ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Think Twice When&hellip;</h2>
+    <p class="reveal">Intellectual honesty matters. Here are the scenarios where FluxForge may not be the best fit &mdash; or where you'd need to adapt it significantly.</p>
+
+    <div class="card-grid">
+      <div class="card card-accent red reveal">
+        <h3>Large Team Projects (10+ Developers)</h3>
+        <p>FluxForge's &ldquo;full-file clarity&rdquo; approach doesn't scale well with many contributors editing the same files. You'd need to introduce module boundaries earlier. Coordination overhead changes the equation.</p>
+      </div>
+
+      <div class="card card-accent red reveal">
+        <h3>Regulated Industries (Healthcare, Finance, Government)</h3>
+        <p>Compliance requirements may demand formal architecture documentation, audit trails, and review processes that conflict with &ldquo;build first, document later.&rdquo; The regulatory environment dictates the process, not the methodology.</p>
+      </div>
+
+      <div class="card card-accent red reveal">
+        <h3>Long-Lived Codebases (5+ Year Horizon)</h3>
+        <p>Single-file architecture and vanilla JS work great for prototypes and MVPs, but codebases maintained over many years benefit from stronger typing and modular architecture earlier. Technical debt compounds differently at scale.</p>
+      </div>
+
+      <div class="card card-accent red reveal">
+        <h3>Performance-Critical Systems</h3>
+        <p>Real-time gaming engines, high-frequency trading, or systems processing millions of requests per second need architecture-first thinking. When microseconds matter, you can't &ldquo;ship and discover&rdquo; your way to performance.</p>
+      </div>
+
+      <div class="card card-accent red reveal">
+        <h3>Projects Requiring Formal Specifications</h3>
+        <p>Government contracts, medical devices, aerospace &mdash; domains where &ldquo;ship and discover&rdquo; is literally not allowed. When human safety depends on software, formal verification and specification come first.</p>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      <p>&ldquo;Intellectual honesty about your methodology's limits is what separates a real methodology from marketing.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ The Hybrid Approach ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">The Hybrid Approach</h2>
+    <p class="reveal">FluxForge doesn't have to be all-or-nothing. Many teams use it for specific phases &mdash; blending FluxForge speed with structured development where it matters.</p>
+
+    <div class="reveal">
+      <div class="step-card">
+        <div class="step-num" style="background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);">1</div>
+        <div class="step-content">
+          <h3>Use FluxForge for Discovery</h3>
+          <p>Build the prototype with FluxForge, then transition to a more structured approach for production. Let the prototype answer the hard questions &mdash; does anyone want this? Does the UX work? &mdash; before committing to a long-term architecture.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="step-card">
+        <div class="step-num" style="background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);">2</div>
+        <div class="step-content">
+          <h3>Use FluxForge for Features</h3>
+          <p>Within a larger project, use FluxForge thinking for new feature exploration. Build a quick vertical slice to validate the idea, then integrate it into the existing codebase using your team's established patterns.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="step-card">
+        <div class="step-num" style="background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 100%);">3</div>
+        <div class="step-content">
+          <h3>Use FluxForge Principles Selectively</h3>
+          <p>Even in enterprise environments, &ldquo;movie trailer thinking&rdquo; and &ldquo;vertical slice first&rdquo; improve outcomes. You don't have to adopt the whole methodology to benefit from its core ideas. Cherry-pick what works for your context.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout teal reveal">
+      <p>&ldquo;The best methodology is the one you adapt to your situation &mdash; not the one you follow religiously.&rdquo;</p>
+      <div class="attribution">&mdash; Thomas Lee</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FluxForge vs. Other Approaches ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">FluxForge vs. Other Approaches</h2>
+    <p class="reveal">Not a takedown &mdash; a respectful positioning. Every methodology solves a real problem. Here's how FluxForge differs in focus and philosophy.</p>
+
+    <div class="card-grid">
+      <div class="card card-accent reveal">
+        <h3>FluxForge vs. Agile / Scrum</h3>
+        <p>Agile optimizes for team coordination and incremental delivery. FluxForge optimizes for individual speed and demo-driven development. Compatible in spirit, different in practice. Agile asks &ldquo;what should we build this sprint?&rdquo; &mdash; FluxForge asks &ldquo;what can I demo today?&rdquo;</p>
+      </div>
+
+      <div class="card card-accent teal reveal">
+        <h3>FluxForge vs. Lean Startup</h3>
+        <p>Similar &ldquo;build-measure-learn&rdquo; philosophy, but FluxForge is more prescriptive about <em>how</em> to build &mdash; the stack, the polish-first approach, the vertical slice method. Lean says &ldquo;validate fast.&rdquo; FluxForge says &ldquo;validate fast <em>with something that feels real</em>.&rdquo;</p>
+      </div>
+
+      <div class="card card-accent orange reveal">
+        <h3>FluxForge vs. Traditional Waterfall</h3>
+        <p>Opposite philosophies. Waterfall plans then builds. FluxForge builds to learn. Waterfall assumes you can know the requirements upfront. FluxForge assumes you can't &mdash; and that the fastest way to discover them is to ship something.</p>
+      </div>
+
+      <div class="card card-accent olive reveal">
+        <h3>FluxForge vs. &ldquo;Vibe Coding&rdquo;</h3>
+        <p>Vibe coding is building without structure. FluxForge has a clear, repeatable methodology &mdash; it just moves fast. Speed with intention, not chaos. Every FluxForge build follows the same loop: hook, slice, test, polish, harden. That's not vibes &mdash; that's discipline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Right-Sizing FluxForge ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Right-Sizing FluxForge</h2>
+    <p class="reveal">How to adapt FluxForge based on project scope. The methodology scales by adjusting which phases you emphasize &mdash; not by adding complexity.</p>
+
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="time">Weekend Project</div>
+        <h4>Full FluxForge</h4>
+        <p>Single file, ship in hours, demo by Sunday. No hardening phase &mdash; this is pure discovery and delight. If the idea survives the weekend, it earns more investment.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time">2-Week Prototype</div>
+        <h4>Build + Feel + Prove</h4>
+        <p>FluxForge build, feel, and prove phases with light hardening. Enough structure to share with stakeholders and gather real feedback. Basic auth and error handling, but no production infrastructure.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time">3-Month MVP</div>
+        <h4>Discovery Then Transition</h4>
+        <p>FluxForge for discovery (weeks 1&ndash;3), then transition to structured development with FluxForge principles. The prototype informs the architecture. You build it wrong fast, then build it right with knowledge.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="time">Enterprise Integration</div>
+        <h4>Cherry-Pick Principles</h4>
+        <p>Cherry-pick FluxForge principles &mdash; movie trailer thinking, vertical slices, demo-driven development &mdash; within existing processes. You don't replace Scrum. You make each sprint start with a compelling demo target.</p>
+      </div>
+    </div>
+
+    <div class="callout orange reveal">
+      <p>&ldquo;The question isn't 'should I use FluxForge?' &mdash; it's 'which parts of FluxForge fit this situation?' The methodology is a toolkit, not a religion.&rdquo;</p>
+      <div class="attribution">&mdash; Thomas Lee</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Pillar Navigation ============ -->
+<section class="content-section" style="border-bottom: none;">
+  <div class="container">
+    <div class="pillar-nav reveal">
+      <a href="ai-in-fluxforge.html">
+        <span class="nav-label">&larr; Previous</span>
+        <span class="nav-title">AI in FluxForge</span>
+      </a>
+      <a href="quick-start.html" class="next">
+        <span class="nav-label">Next &rarr;</span>
+        <span class="nav-title">Quick Start</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://thomaslee.tech" target="_blank">thomaslee.tech</a>
+      <a href="https://linkedin.com/in/thomas-lee-dev" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/TommyLeeDev" target="_blank">X / Twitter</a>
+    </div>
+    <div>&copy; 2025 Thomas Lee</div>
+    <div class="footer-tagline">FluxForge is a development methodology, not a framework. That's the point.</div>
+  </div>
+</footer>
+
+<!-- ============ Scripts ============ -->
+<script>
+// Reveal-on-scroll animation
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 100);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
+
+// Hamburger toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+// Close nav when clicking a link (mobile)
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
