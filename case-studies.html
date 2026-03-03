@@ -41,8 +41,8 @@
     font-family: var(--mono); font-size: 12px; font-weight: 700;
     color: var(--amber); margin-top: 8px;
   }
-  .case-study-timeline::before {
-    content: '\23F1'; font-size: 14px;
+  .case-study-timeline svg {
+    width: 14px; height: 14px; flex-shrink: 0;
   }
 
   .case-study-body {
@@ -187,18 +187,18 @@
 
     <div class="case-study-body reveal">
       <div class="case-study-section">
-        <h4 class="problem-label">&#9888; The Problem</h4>
+        <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
         <p>QA teams working on enterprise voice bots had no systematic way to test conversations. They were manually calling their own bots, scribbling notes, and filing issues in spreadsheets. Every test was unrepeatable, unrecorded, and unstructured. They needed a tool that could initiate calls, capture transcripts in real time, and log issues directly against specific moments in the conversation.</p>
       </div>
 
       <div class="case-study-section">
-        <h4 class="outcome-label">&#9989; The Outcome</h4>
+        <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
         <p>A fully functional call analysis platform with real-time transcription, conversation playback, and an issue tracking dashboard. QA teams could initiate test calls, watch transcripts appear live, flag problems inline, and export structured reports. Used by enterprise voice AI teams to systematically validate bot behavior across hundreds of scenarios.</p>
         <p>Demonstrates FluxForge's ability to integrate complex real-time systems (WebRTC, speech-to-text, live UI updates) into a cohesive product in days, not months.</p>
       </div>
 
       <div class="case-study-section full-width">
-        <h4 class="build-label">&#9889; The Build</h4>
+        <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Watching a live call transcript appear word-by-word in real time, synchronized with the actual conversation as it happens.</div>
         <div class="detail-label">Vertical Slice</div>
@@ -214,7 +214,7 @@
 <div class="case-study">
   <div class="container">
     <div class="case-study-header reveal">
-      <div class="case-study-emoji">&#128221;</div>
+      <div class="case-study-emoji"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></div>
       <div class="case-study-meta">
         <div class="case-study-name">VibePad</div>
         <div class="case-study-tagline">A feature-rich code editor built entirely with vanilla JavaScript &mdash; no React, no Vue, no frameworks.</div>
@@ -229,18 +229,18 @@
 
     <div class="case-study-body reveal">
       <div class="case-study-section">
-        <h4 class="problem-label">&#9888; The Problem</h4>
+        <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
         <p>The prevailing wisdom says you need React or Vue to build anything complex on the web. VibePad was born to disprove that. The challenge: build a fully featured, IDE-like code editor &mdash; syntax highlighting, live preview, theme engine, multi-file support &mdash; using nothing but vanilla JavaScript. No build tools, no bundlers, no framework tax.</p>
       </div>
 
       <div class="case-study-section">
-        <h4 class="outcome-label">&#9989; The Outcome</h4>
+        <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
         <p>A complete code editor with syntax highlighting for multiple languages, a custom theme engine with dark and light modes, Canvas-powered minimap, code intelligence features, multi-file project support, and integrated live preview. All running as a single HTML file with zero dependencies.</p>
         <p>VibePad is the definitive proof of the FluxForge "zero frameworks" principle at scale. It shows that vanilla JS isn't just viable for complex applications &mdash; it's often faster to build with, easier to debug, and lighter to ship.</p>
       </div>
 
       <div class="case-study-section full-width">
-        <h4 class="build-label">&#9889; The Build</h4>
+        <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Opening the editor, pasting in code, and watching syntax highlighting + live preview render instantly &mdash; all powered by zero external libraries.</div>
         <div class="detail-label">Vertical Slice</div>
@@ -256,7 +256,7 @@
 <div class="case-study">
   <div class="container">
     <div class="case-study-header reveal">
-      <div class="case-study-emoji">&#127921;</div>
+      <div class="case-study-emoji"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--olive2)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="var(--olive2)"/></svg></div>
       <div class="case-study-meta">
         <div class="case-study-name">CV Pool</div>
         <div class="case-study-tagline">Play pool with your hands &mdash; computer vision-powered billiards using MediaPipe hand tracking.</div>
@@ -271,18 +271,18 @@
 
     <div class="case-study-body reveal">
       <div class="case-study-section">
-        <h4 class="problem-label">&#9888; The Problem</h4>
+        <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
         <p>Gesture-based gaming has always felt gimmicky. The Wii waggle, the Kinect dance &mdash; fun as novelties, but the controls never felt precise or responsive enough for a skill-based game. The question: can you make a gesture-controlled game that actually feels good to play? Can hand tracking be responsive and accurate enough for a game that requires fine motor control, like pool?</p>
       </div>
 
       <div class="case-study-section">
-        <h4 class="outcome-label">&#9989; The Outcome</h4>
+        <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
         <p>A fully playable billiards game controlled entirely by hand gestures via a webcam. Smooth hand tracking maps your real hand position to a virtual cue stick. Realistic ball physics, pocket detection, and satisfying collision sounds. Projection-ready for use on real pool tables &mdash; turning any surface into an interactive game.</p>
         <p>Demonstrates the "Feel Real" pillar in its purest form: responsive, tactile interaction that makes technology disappear behind the experience.</p>
       </div>
 
       <div class="case-study-section full-width">
-        <h4 class="build-label">&#9889; The Build</h4>
+        <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Seeing your hand tracked on screen, pulling back a virtual cue stick, and watching the ball roll across the table with realistic physics.</div>
         <div class="detail-label">Vertical Slice</div>
@@ -298,7 +298,7 @@
 <div class="case-study">
   <div class="container">
     <div class="case-study-header reveal">
-      <div class="case-study-emoji">&#129499;</div>
+      <div class="case-study-emoji"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--red2)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
       <div class="case-study-meta">
         <div class="case-study-name">TimeVampire</div>
         <div class="case-study-tagline">AI-powered spam call interceptor that wastes scammers' time with convincing AI conversation.</div>
@@ -313,18 +313,18 @@
 
     <div class="case-study-body reveal">
       <div class="case-study-section">
-        <h4 class="problem-label">&#9888; The Problem</h4>
+        <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
         <p>Robocalls waste billions of hours of human time every year. Call blockers help, but scammers adapt. TimeVampire flips the script: instead of blocking the call, what if you answered it &mdash; with an AI that's specifically designed to waste the scammer's time? Keep them engaged, string them along, and make every minute they spend on your AI one less minute they spend scamming a real person.</p>
       </div>
 
       <div class="case-study-section">
-        <h4 class="outcome-label">&#9989; The Outcome</h4>
+        <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
         <p>A working spam interceptor that picks up incoming calls, detects likely spam, and engages the caller with an AI personality. The AI generates natural conversational responses, asks clarifying questions, pretends to look for its "credit card," and generally keeps scammers on the line for as long as possible. Multiple AI personalities available for variety.</p>
         <p>Demonstrates FluxForge's ability to rapidly integrate multiple AI APIs (speech-to-text, language model, text-to-speech, telephony) into a cohesive real-time system.</p>
       </div>
 
       <div class="case-study-section full-width">
-        <h4 class="build-label">&#9889; The Build</h4>
+        <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">A scammer calls in, the AI picks up with a friendly "Hello?", and a five-minute conversation unfolds where the scammer never realizes they're talking to a machine.</div>
         <div class="detail-label">Vertical Slice</div>
@@ -340,7 +340,7 @@
 <div class="case-study">
   <div class="container">
     <div class="case-study-header reveal">
-      <div class="case-study-emoji">&#127923;</div>
+      <div class="case-study-emoji"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--orange2)" stroke-width="1.5"><circle cx="12" cy="14" r="8"/><circle cx="10" cy="11" r="1.5" fill="var(--orange2)"/><circle cx="14" cy="11" r="1.5" fill="var(--orange2)"/><circle cx="12" cy="15" r="1.5" fill="var(--orange2)"/></svg></div>
       <div class="case-study-meta">
         <div class="case-study-name">CV Bowling</div>
         <div class="case-study-tagline">Gesture-controlled bowling with hand tracking &mdash; swing your arm and watch the pins fly.</div>
@@ -355,18 +355,18 @@
 
     <div class="case-study-body reveal">
       <div class="case-study-section">
-        <h4 class="problem-label">&#9888; The Problem</h4>
+        <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
         <p>Can you make bowling feel physical using just a webcam? No special controllers, no motion sensors &mdash; just your arm, a camera, and a browser. The challenge is mapping the full arc of a bowling throw (approach, backswing, release, follow-through) to gesture data and translating that into satisfying pin-smashing physics.</p>
       </div>
 
       <div class="case-study-section">
-        <h4 class="outcome-label">&#9989; The Outcome</h4>
+        <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
         <p>An arcade-style bowling game controlled entirely by arm gestures. The camera tracks your arm swing, detects the release point, calculates velocity and angle, and launches the ball down the lane. Realistic pin collision physics, lane animations, and satisfying sound design make every strike feel tangible and rewarding.</p>
         <p>Proves that the "Feel Real" pillar extends beyond visual polish &mdash; sound, physics, and responsiveness combine to create a genuinely physical-feeling digital experience.</p>
       </div>
 
       <div class="case-study-section full-width">
-        <h4 class="build-label">&#9889; The Build</h4>
+        <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Swinging your arm in front of the webcam and watching the bowling ball roll down the lane, curving with your wrist angle, and crashing into pins with full physics.</div>
         <div class="detail-label">Vertical Slice</div>
@@ -382,7 +382,7 @@
 <div class="case-study">
   <div class="container">
     <div class="case-study-header reveal">
-      <div class="case-study-emoji">&#128272;</div>
+      <div class="case-study-emoji"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1" fill="var(--amber)"/></svg></div>
       <div class="case-study-meta">
         <div class="case-study-name">InviteGate</div>
         <div class="case-study-tagline">Drop-in access control with invite codes &mdash; gate your beta without building full auth.</div>
@@ -397,18 +397,18 @@
 
     <div class="case-study-body reveal">
       <div class="case-study-section">
-        <h4 class="problem-label">&#9888; The Problem</h4>
+        <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
         <p>You've built a prototype and you want to share it with a small group of beta testers. But you don't need a full auth system yet &mdash; no sign-up flows, no password resets, no OAuth integrations. You just need a gate: give someone a code, they get in. Simple, secure, and deployable in minutes. Every FluxForge project that reaches the "Prove Outcomes" phase needs this, and building it fresh each time is wasteful.</p>
       </div>
 
       <div class="case-study-section">
-        <h4 class="outcome-label">&#9989; The Outcome</h4>
+        <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
         <p>A single-file, drop-in access control system. Generate invite codes, set usage limits and expiry dates, and gate any page or application behind a clean code-entry UI. Session-based access persists so users don't need to re-enter codes. Admin dashboard shows which codes are active, how many times each has been used, and when they expire.</p>
         <p>Now reused across multiple FluxForge projects. Demonstrates the "Harden" pillar perfectly: simple security that works, deployed in minutes, and battle-tested across dozens of applications.</p>
       </div>
 
       <div class="case-study-section full-width">
-        <h4 class="build-label">&#9889; The Build</h4>
+        <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Entering an invite code on a clean, minimal gate page and being instantly redirected to the protected application &mdash; the entire experience taking under two seconds.</div>
         <div class="detail-label">Vertical Slice</div>

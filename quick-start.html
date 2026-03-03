@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quick Start — Your First FluxForge Build</title>
 <meta name="description" content="A practical quick-start guide for the FluxForge methodology. From idea to working demo in under an hour. By Thomas Lee.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%A1</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z' fill='%23f0a830'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -16,7 +16,7 @@
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">&#9889;</div>
+      <div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg></div>
       <div class="nav-logo-text">FluxForge</div>
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation">
@@ -29,10 +29,12 @@
       <a href="feel-real.html">Feel Real</a>
       <a href="prove-outcomes.html">Prove Outcomes</a>
       <a href="harden.html">Harden</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="ai-in-fluxforge.html">AI in FluxForge</a>
+      <a href="case-studies.html">Showcases</a>
+      <a href="ai-in-fluxforge.html">AI</a>
       <a href="when-to-use.html">When to Use</a>
       <a href="quick-start.html" class="active">Quick Start</a>
+      <a href="starter-kit.html">Starter Kit</a>
+      <a href="connect.html">Connect</a>
     </div>
   </div>
 </nav>
@@ -46,8 +48,19 @@
   </div>
 </header>
 
+<div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:16px 0;position:sticky;top:56px;z-index:50;backdrop-filter:blur(12px);background:rgba(33,28,20,0.92)">
+  <div class="container" style="display:flex;gap:8px;overflow-x:auto;scrollbar-width:none">
+    <a href="#step-prereq" style="padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;font-family:var(--mono);color:var(--text3);background:var(--bg3);border:1px solid var(--border);white-space:nowrap;transition:all 0.2s;text-decoration:none">Prereqs</a>
+    <a href="#step-1" style="padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;font-family:var(--mono);color:var(--text3);background:var(--bg3);border:1px solid var(--border);white-space:nowrap;transition:all 0.2s;text-decoration:none">1. Trailer</a>
+    <a href="#step-2" style="padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;font-family:var(--mono);color:var(--text3);background:var(--bg3);border:1px solid var(--border);white-space:nowrap;transition:all 0.2s;text-decoration:none">2. Build</a>
+    <a href="#step-3" style="padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;font-family:var(--mono);color:var(--text3);background:var(--bg3);border:1px solid var(--border);white-space:nowrap;transition:all 0.2s;text-decoration:none">3. Polish</a>
+    <a href="#step-4" style="padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;font-family:var(--mono);color:var(--text3);background:var(--bg3);border:1px solid var(--border);white-space:nowrap;transition:all 0.2s;text-decoration:none">4. Test</a>
+    <a href="#step-5" style="padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;font-family:var(--mono);color:var(--text3);background:var(--bg3);border:1px solid var(--border);white-space:nowrap;transition:all 0.2s;text-decoration:none">5. Fix</a>
+  </div>
+</div>
+
 <!-- ============ Before You Start ============ -->
-<section class="content-section">
+<section class="content-section" id="step-prereq">
   <div class="container">
     <h2 class="reveal">Before You Start</h2>
     <p class="reveal">Everything you need to get going. If you have a laptop and a browser, you&rsquo;re 90% there.</p>
@@ -70,7 +83,7 @@
 </section>
 
 <!-- ============ Step 1: Define Your Movie Trailer ============ -->
-<section class="content-section">
+<section class="content-section" id="step-1">
   <div class="container">
     <div class="step-card reveal">
       <div class="step-num">1</div>
@@ -111,7 +124,7 @@
 </section>
 
 <!-- ============ Step 2: Build the Vertical Slice ============ -->
-<section class="content-section">
+<section class="content-section" id="step-2">
   <div class="container">
     <div class="step-card reveal">
       <div class="step-num">2</div>
@@ -126,6 +139,7 @@
     <h3 class="reveal">The FluxForge Single-File Structure</h3>
 
     <div class="code-block reveal">
+<button class="code-copy" onclick="this.textContent='Copied!';this.classList.add('copied');navigator.clipboard.writeText(this.parentElement.textContent.replace('Copy','').replace('Copied!',''));setTimeout(()=>{this.textContent='Copy';this.classList.remove('copied')},2000)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
 <span class="comment">&lt;!DOCTYPE html&gt;</span><br>
 <span class="comment">&lt;html&gt;</span><br>
 <span class="comment">&lt;head&gt;</span><br>
@@ -175,7 +189,7 @@
 </section>
 
 <!-- ============ Step 3: Make It Feel Real ============ -->
-<section class="content-section">
+<section class="content-section" id="step-3">
   <div class="container">
     <div class="step-card reveal">
       <div class="step-num">3</div>
@@ -202,6 +216,7 @@
     <p class="reveal">No external files needed. This creates a short, satisfying click sound entirely in JavaScript:</p>
 
     <div class="code-block reveal">
+<button class="code-copy" onclick="this.textContent='Copied!';this.classList.add('copied');navigator.clipboard.writeText(this.parentElement.textContent.replace('Copy','').replace('Copied!',''));setTimeout(()=>{this.textContent='Copy';this.classList.remove('copied')},2000)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
 <span class="comment">// Create a reusable click sound function</span><br>
 <span class="highlight">function playClick()</span> {<br>
 &nbsp;&nbsp;const ctx = new (window.AudioContext || window.webkitAudioContext)();<br>
@@ -235,7 +250,7 @@ document.querySelector(<span class="highlight">'.my-button'</span>).addEventList
 </section>
 
 <!-- ============ Step 4: Test with One Real Person ============ -->
-<section class="content-section">
+<section class="content-section" id="step-4">
   <div class="container">
     <div class="step-card reveal">
       <div class="step-num">4</div>
@@ -277,7 +292,7 @@ document.querySelector(<span class="highlight">'.my-button'</span>).addEventList
 </section>
 
 <!-- ============ Step 5: Fix the Top Friction Point ============ -->
-<section class="content-section">
+<section class="content-section" id="step-5">
   <div class="container">
     <div class="step-card reveal">
       <div class="step-num">5</div>
@@ -357,6 +372,7 @@ document.querySelector(<span class="highlight">'.my-button'</span>).addEventList
     <p class="reveal">A compact reference you can keep open during builds. This is the entire methodology in seven lines.</p>
 
     <div class="code-block reveal">
+<button class="code-copy" onclick="this.textContent='Copied!';this.classList.add('copied');navigator.clipboard.writeText(this.parentElement.textContent.replace('Copy','').replace('Copied!',''));setTimeout(()=>{this.textContent='Copy';this.classList.remove('copied')},2000)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
 <span class="comment">// The FluxForge Build Loop</span><br>
 <span class="comment">// Pin this. Reference it. Repeat it.</span><br>
 <br>

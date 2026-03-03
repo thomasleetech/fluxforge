@@ -464,6 +464,24 @@ navLinks.querySelectorAll('a').forEach(link => {
     navLinks.classList.remove('open');
   });
 });
+
+// Animated counters
+document.querySelectorAll('[data-count]').forEach(el => {
+  const io = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      const target = parseInt(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const start = performance.now();
+      (function tick(now) {
+        const p = Math.min((now - start) / 1000, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      })(start);
+      io.unobserve(el);
+    }
+  }, { threshold: 0.3 });
+  io.observe(el);
+});
 </script>
 
 </body>

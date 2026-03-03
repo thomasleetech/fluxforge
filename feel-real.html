@@ -256,9 +256,15 @@
       </div>
     </div>
 
+    <div class="callout reveal" style="text-align: center;">
+      <p style="margin-bottom: 12px;"><strong>Hear the difference yourself:</strong></p>
+      <button onclick="(function(){const c=new(window.AudioContext||window.webkitAudioContext)();const o=c.createOscillator();const g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.setValueAtTime(800,c.currentTime);o.frequency.exponentialRampToValueAtTime(400,c.currentTime+0.08);g.gain.setValueAtTime(0.3,c.currentTime);g.gain.exponentialRampToValueAtTime(0.01,c.currentTime+0.1);o.start(c.currentTime);o.stop(c.currentTime+0.1)})()" style="padding:12px 28px;border-radius:10px;background:linear-gradient(135deg,var(--amber),var(--orange));border:none;cursor:pointer;font-family:var(--mono);font-size:13px;font-weight:700;color:#1a1510;transition:all 0.2s;box-shadow:0 4px 16px rgba(240,168,48,0.25);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>Play Click Sound</button>
+    </div>
+
     <h3 class="reveal">Practical Implementation</h3>
 
     <div class="code-block reveal">
+      <button class="code-copy" onclick="this.textContent='Copied!';this.classList.add('copied');navigator.clipboard.writeText(this.parentElement.textContent.replace('Copy','').replace('Copied!',''));setTimeout(()=>{this.textContent='Copy';this.classList.remove('copied')},2000)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
       <span class="comment">// FluxForge sound utility — preload and play with one line</span><br>
       <span class="highlight">const sounds</span> = {<br>
       &nbsp;&nbsp;click: new Audio('sounds/click.mp3'),<br>
@@ -357,6 +363,7 @@
     </div>
 
     <div class="code-block reveal">
+      <button class="code-copy" onclick="this.textContent='Copied!';this.classList.add('copied');navigator.clipboard.writeText(this.parentElement.textContent.replace('Copy','').replace('Copied!',''));setTimeout(()=>{this.textContent='Copy';this.classList.remove('copied')},2000)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
       <span class="comment">/* FluxForge animation defaults */</span><br>
       <span class="highlight">.ff-transition</span> {<br>
       &nbsp;&nbsp;transition: transform 0.2s ease-out, opacity 0.2s ease-out;<br>
@@ -490,6 +497,7 @@
     </div>
 
     <div class="code-block reveal">
+      <button class="code-copy" onclick="this.textContent='Copied!';this.classList.add('copied');navigator.clipboard.writeText(this.parentElement.textContent.replace('Copy','').replace('Copied!',''));setTimeout(()=>{this.textContent='Copy';this.classList.remove('copied')},2000)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
       <span class="comment">// Optimistic UI — instant feedback, async confirmation</span><br>
       <span class="highlight">function toggleLike</span>(postId) {<br>
       &nbsp;&nbsp;<span class="comment">// 1. Update UI immediately</span><br>
@@ -623,6 +631,24 @@ navToggle.addEventListener('click', () => {
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
+  });
+});
+
+// Interactive checklist
+document.querySelectorAll('.checklist-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('checked');
+    // Play subtle click
+    try {
+      const c = new (window.AudioContext || window.webkitAudioContext)();
+      const o = c.createOscillator(); const g = c.createGain();
+      o.connect(g); g.connect(c.destination);
+      o.frequency.setValueAtTime(600, c.currentTime);
+      o.frequency.exponentialRampToValueAtTime(300, c.currentTime + 0.05);
+      g.gain.setValueAtTime(0.15, c.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.01, c.currentTime + 0.06);
+      o.start(c.currentTime); o.stop(c.currentTime + 0.06);
+    } catch(e) {}
   });
 });
 </script>

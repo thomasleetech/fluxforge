@@ -115,6 +115,15 @@
   }
   .hero-nav-card .card-desc { font-size: 12px; color: var(--text3); }
 
+  /* Gradient bar */
+  .gradient-bar {
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--amber), var(--olive), var(--teal, #2c6880), var(--amber));
+    background-size: 200% 100%;
+    animation: gradientSlide 4s ease-in-out infinite;
+  }
+  @keyframes gradientSlide { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
   /* Philosophy section */
   .philosophy {
     padding: 100px 0; border-top: 2px solid var(--border);

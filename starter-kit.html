@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starter Kit — FluxForge Templates &amp; Boilerplates</title>
+<meta name="description" content="Ready-to-use starter templates for FluxForge projects. Zero dependencies, mobile-first, single-file HTML boilerplates. By Thomas Lee.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z' fill='%23f0a830'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ Site Navigation ============ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg></div>
+      <div class="nav-logo-text">FluxForge</div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">FluxForge</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="build-fast.html">Build Fast</a>
+      <a href="feel-real.html">Feel Real</a>
+      <a href="prove-outcomes.html">Prove Outcomes</a>
+      <a href="harden.html">Harden</a>
+      <a href="case-studies.html">Showcases</a>
+      <a href="ai-in-fluxforge.html">AI</a>
+      <a href="when-to-use.html">When to Use</a>
+      <a href="quick-start.html">Quick Start</a>
+      <a href="starter-kit.html" class="active">Starter Kit</a>
+      <a href="connect.html">Connect</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ Page Header ============ -->
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">FluxForge</a> &rsaquo; Starter Kit</div>
+    <h1>The FluxForge <span class="accent">Starter Kit</span></h1>
+    <p class="subtitle">Ready-to-use templates and boilerplates to kickstart your next FluxForge project. No npm. No frameworks. Just open and build.</p>
+  </div>
+</header>
+
+<!-- ============ Intro ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">Zero-Dependency Starters</h2>
+    <p class="reveal">These are minimal, single-file starter templates that embody the FluxForge philosophy &mdash; zero dependencies, mobile-first, with sound and motion built in from line one. Each kit is a complete starting point you can open in any text editor and start building immediately.</p>
+    <p class="reveal">No package manager. No build tool. No configuration ritual. Just an HTML file with everything you need wired up and ready to go. Copy one, open it in your editor, and start turning your movie trailer idea into a working demo.</p>
+  </div>
+</section>
+
+<!-- ============ Starter Kit Cards ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">The Templates</h2>
+
+    <div class="card-grid">
+
+      <!-- Kit 1: The Blank Canvas -->
+      <div class="kit-card reveal" style="grid-column: 1 / -1;">
+        <div class="kit-card-header">
+          <div class="kit-card-icon" style="color: var(--amber);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <div>
+            <h3>The Blank Canvas</h3>
+            <p class="mb-0" style="font-family: var(--mono); font-size: 12px; color: var(--text3); margin-bottom: 0;">The purest starting point</p>
+          </div>
+        </div>
+        <p>The purest FluxForge starting point. A single HTML file with a dark theme, responsive layout, touch-ready UI shell, and the Web Audio click sound already wired up. Open it and start building.</p>
+        <ul class="file-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> index.html (~80 lines)</li>
+        </ul>
+
+        <div class="code-block" style="margin-bottom: 16px;">
+<button class="code-copy" onclick="copyTemplate(this)" aria-label="Copy template"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
+<span class="comment">&lt;!DOCTYPE html&gt;</span><br>
+<span class="comment">&lt;html lang="en"&gt;</span><br>
+<span class="comment">&lt;head&gt;</span><br>
+&nbsp;&nbsp;&lt;meta charset=<span class="highlight">"UTF-8"</span>&gt;<br>
+&nbsp;&nbsp;&lt;meta name=<span class="highlight">"viewport"</span> content=<span class="highlight">"width=device-width, initial-scale=1.0"</span>&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;<span class="highlight">My FluxForge App</span>&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;style&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight">:root</span> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--bg: <span class="highlight">#1a1510</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--text: <span class="highlight">#f0e8d8</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--amber: <span class="highlight">#f0a830</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--surface: <span class="highlight">#2a2318</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--border: <span class="highlight">#3d3225</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: var(--bg); color: var(--text);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: system-ui, sans-serif;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min-height: 100vh; display: flex;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;align-items: center; justify-content: center;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.container {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max-width: 480px; width: 100%; padding: 32px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h1 { font-size: clamp(24px, 5vw, 36px); margin-bottom: 16px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;h1 span { color: var(--amber); }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p { color: #c8b89a; margin-bottom: 24px; line-height: 1.6; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.btn {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 14px 32px; border-radius: 10px; border: none;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: var(--amber); color: var(--bg);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 700; font-size: 16px; cursor: pointer;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min-height: 48px; transition: all 0.2s;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.btn:hover { transform: translateY(-2px); filter: brightness(1.1); }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.btn:active { transform: translateY(0); }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/* Reveal animation */</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;.reveal { opacity: 0; transform: translateY(16px); transition: all 0.5s ease; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.reveal.visible { opacity: 1; transform: translateY(0); }<br>
+&nbsp;&nbsp;&lt;/style&gt;<br>
+<span class="comment">&lt;/head&gt;</span><br>
+<span class="comment">&lt;body&gt;</span><br>
+&nbsp;&nbsp;&lt;div class=<span class="highlight">"container"</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class=<span class="highlight">"reveal"</span>&gt;My &lt;span&gt;App&lt;/span&gt;&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class=<span class="highlight">"reveal"</span>&gt;Your movie trailer description goes here.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class=<span class="highlight">"btn reveal"</span> onclick=<span class="highlight">"playClick()"</span>&gt;Get Started&lt;/button&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;script&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Web Audio click sound</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight">function playClick()</span> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const ctx = new (window.AudioContext || window.webkitAudioContext)();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const osc = ctx.createOscillator();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const gain = ctx.createGain();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;osc.connect(gain); gain.connect(ctx.destination);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;osc.frequency.setValueAtTime(800, ctx.currentTime);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;osc.frequency.exponentialRampToValueAtTime(400, ctx.currentTime + 0.08);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gain.gain.setValueAtTime(0.3, ctx.currentTime);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Reveal on scroll</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;const obs = new IntersectionObserver((entries) =&gt; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entries.forEach((e, i) =&gt; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (e.isIntersecting) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(() =&gt; e.target.classList.add('visible'), i * 100);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obs.unobserve(e.target);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}, { threshold: 0.15 });<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document.querySelectorAll('.reveal').forEach(el =&gt; obs.observe(el));<br>
+&nbsp;&nbsp;&lt;/script&gt;<br>
+<span class="comment">&lt;/body&gt;</span><br>
+<span class="comment">&lt;/html&gt;</span>
+        </div>
+
+        <a class="kit-download" href="#blank-canvas" onclick="copyTemplate(this.closest('.kit-card').querySelector('.code-block'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Copy Template</a>
+      </div>
+
+      <!-- Kit 2: Voice App Starter -->
+      <div class="kit-card reveal" style="grid-column: 1 / -1;">
+        <div class="kit-card-header">
+          <div class="kit-card-icon" style="color: var(--teal2);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <div>
+            <h3>Voice App Starter</h3>
+            <p class="mb-0" style="font-family: var(--mono); font-size: 12px; color: var(--text3); margin-bottom: 0;">Microphone + waveform visualizer</p>
+          </div>
+        </div>
+        <p>A starter for voice-powered applications. Includes microphone access, a real-time waveform visualizer using Canvas, and the Web Audio API integration. Speak and see your audio visualized instantly.</p>
+        <ul class="file-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> index.html (~150 lines)</li>
+        </ul>
+
+        <div class="code-block" style="margin-bottom: 16px;">
+<button class="code-copy" onclick="copyTemplate(this)" aria-label="Copy template"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
+<span class="comment">// --- Microphone Access ---</span><br>
+<span class="highlight">async function startMic()</span> {<br>
+&nbsp;&nbsp;const stream = await navigator.mediaDevices.getUserMedia({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;audio: { echoCancellation: true, noiseSuppression: true }<br>
+&nbsp;&nbsp;});<br>
+&nbsp;&nbsp;const audioCtx = new AudioContext();<br>
+&nbsp;&nbsp;const source = audioCtx.createMediaStreamSource(stream);<br>
+&nbsp;&nbsp;const analyser = audioCtx.createAnalyser();<br>
+&nbsp;&nbsp;analyser.fftSize = <span class="highlight">2048</span>;<br>
+&nbsp;&nbsp;source.connect(analyser);<br>
+&nbsp;&nbsp;drawWaveform(analyser);<br>
+}<br>
+<br>
+<span class="comment">// --- Canvas Waveform Drawing ---</span><br>
+<span class="highlight">function drawWaveform(analyser)</span> {<br>
+&nbsp;&nbsp;const canvas = document.getElementById(<span class="highlight">'waveform'</span>);<br>
+&nbsp;&nbsp;const ctx = canvas.getContext('2d');<br>
+&nbsp;&nbsp;const bufferLength = analyser.frequencyBinCount;<br>
+&nbsp;&nbsp;const dataArray = new Uint8Array(bufferLength);<br>
+<br>
+&nbsp;&nbsp;function draw() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;requestAnimationFrame(draw);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;analyser.getByteTimeDomainData(dataArray);<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillStyle = <span class="highlight">'#1a1510'</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillRect(0, 0, canvas.width, canvas.height);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.lineWidth = 2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.strokeStyle = <span class="highlight">'#5a9898'</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.beginPath();<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;const sliceWidth = canvas.width / bufferLength;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;let x = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for (let i = 0; i &lt; bufferLength; i++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const v = dataArray[i] / 128.0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const y = (v * canvas.height) / 2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x += sliceWidth;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.lineTo(canvas.width, canvas.height / 2);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.stroke();<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;draw();<br>
+}<br>
+<br>
+<span class="comment">// --- Audio Context Setup ---</span><br>
+<span class="highlight">const audioCtx</span> = new (window.AudioContext || window.webkitAudioContext)();<br>
+<span class="highlight">const analyser</span> = audioCtx.createAnalyser();<br>
+analyser.fftSize = 2048;<br>
+analyser.smoothingTimeConstant = <span class="highlight">0.85</span>;<br>
+<br>
+<span class="comment">// Start on user gesture (required by browsers)</span><br>
+document.getElementById(<span class="highlight">'startBtn'</span>).addEventListener(<span class="highlight">'click'</span>, startMic);
+        </div>
+      </div>
+
+      <!-- Kit 3: Dashboard Starter -->
+      <div class="kit-card reveal" style="grid-column: 1 / -1;">
+        <div class="kit-card-header">
+          <div class="kit-card-icon" style="color: var(--olive2);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="4"/><rect x="14" y="10" width="7" height="7"/><rect x="3" y="13" width="7" height="4"/></svg>
+          </div>
+          <div>
+            <h3>Dashboard Starter</h3>
+            <p class="mb-0" style="font-family: var(--mono); font-size: 12px; color: var(--text3); margin-bottom: 0;">Stat cards + responsive grid</p>
+          </div>
+        </div>
+        <p>A data dashboard boilerplate with stat cards, a responsive grid layout, and smooth entry animations. Dark theme, mobile-first, with placeholder data structure ready for your API integration.</p>
+        <ul class="file-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> index.html (~120 lines)</li>
+        </ul>
+
+        <div class="code-block" style="margin-bottom: 16px;">
+<button class="code-copy" onclick="copyTemplate(this)" aria-label="Copy template"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
+<span class="comment">&lt;!-- Dashboard Layout Structure --&gt;</span><br>
+&lt;div class=<span class="highlight">"dashboard"</span>&gt;<br>
+&nbsp;&nbsp;&lt;header class=<span class="highlight">"dash-header"</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Dashboard&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=<span class="highlight">"status-dot"</span>&gt;&lt;/span&gt; Live<br>
+&nbsp;&nbsp;&lt;/header&gt;<br>
+<br>
+&nbsp;&nbsp;<span class="comment">&lt;!-- Stat Cards Grid --&gt;</span><br>
+&nbsp;&nbsp;&lt;div class=<span class="highlight">"stats-row"</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat"</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat-value"</span>&gt;1,284&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat-label"</span>&gt;Total Users&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat"</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat-value"</span>&gt;94%&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat-label"</span>&gt;Uptime&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat"</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat-value"</span>&gt;32ms&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"stat-label"</span>&gt;Latency&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;<br>
+<br>
+&nbsp;&nbsp;<span class="comment">&lt;!-- Content Grid --&gt;</span><br>
+&nbsp;&nbsp;&lt;div class=<span class="highlight">"grid"</span>&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"panel"</span>&gt;Activity Feed&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=<span class="highlight">"panel"</span>&gt;Chart Area&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+<br>
+<span class="comment">&lt;!-- Responsive Grid CSS --&gt;</span><br>
+&lt;style&gt;<br>
+&nbsp;&nbsp;.stats-row {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: <span class="highlight">repeat(auto-fit, minmax(140px, 1fr))</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gap: 16px; margin-bottom: 24px;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;.stat {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background: <span class="highlight">#2a2318</span>; padding: 24px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;border-radius: 12px; border: 1px solid #3d3225;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;animation: <span class="highlight">slideUp 0.4s ease both</span>;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;.stat-value { font-size: 32px; font-weight: 800; color: <span class="highlight">#f0a830</span>; }<br>
+&nbsp;&nbsp;.grid {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: <span class="highlight">2fr 1fr</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gap: 16px;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }<br>
+&nbsp;&nbsp;<span class="highlight">@keyframes slideUp</span> {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;from { opacity: 0; transform: translateY(20px); }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;to { opacity: 1; transform: translateY(0); }<br>
+&nbsp;&nbsp;}<br>
+&lt;/style&gt;<br>
+<br>
+<span class="comment">&lt;!-- Placeholder Data for API Integration --&gt;</span><br>
+&lt;script&gt;<br>
+&nbsp;&nbsp;const <span class="highlight">DATA</span> = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stats: [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Total Users', value: '1,284' },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Uptime', value: '94%' },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ label: 'Latency', value: '32ms' },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Replace with: fetch('/api/stats').then(r =&gt; r.json())</span><br>
+&nbsp;&nbsp;};<br>
+&lt;/script&gt;
+        </div>
+      </div>
+
+      <!-- Kit 4: Interactive Game Starter -->
+      <div class="kit-card reveal" style="grid-column: 1 / -1;">
+        <div class="kit-card-header">
+          <div class="kit-card-icon" style="color: var(--orange2);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="10" r="1" fill="currentColor"/><circle cx="18" cy="13" r="1" fill="currentColor"/></svg>
+          </div>
+          <div>
+            <h3>Interactive Game Starter</h3>
+            <p class="mb-0" style="font-family: var(--mono); font-size: 12px; color: var(--text3); margin-bottom: 0;">Canvas render loop + input + audio</p>
+          </div>
+        </div>
+        <p>A Canvas-based game template with a render loop, touch/mouse input handling, basic collision detection helpers, and the Web Audio sound system. Start building your game mechanic in minutes.</p>
+        <ul class="file-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> index.html (~180 lines)</li>
+        </ul>
+
+        <div class="code-block" style="margin-bottom: 16px;">
+<button class="code-copy" onclick="copyTemplate(this)" aria-label="Copy template"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy</button>
+<span class="comment">// --- Canvas Setup ---</span><br>
+const canvas = document.getElementById(<span class="highlight">'game'</span>);<br>
+const ctx = canvas.getContext(<span class="highlight">'2d'</span>);<br>
+canvas.width = window.innerWidth;<br>
+canvas.height = window.innerHeight;<br>
+<br>
+<span class="comment">// --- Game State ---</span><br>
+const <span class="highlight">state</span> = {<br>
+&nbsp;&nbsp;player: { x: canvas.width / 2, y: canvas.height / 2, size: 20 },<br>
+&nbsp;&nbsp;targets: [],<br>
+&nbsp;&nbsp;score: 0,<br>
+&nbsp;&nbsp;running: true<br>
+};<br>
+<br>
+<span class="comment">// --- Touch &amp; Mouse Input ---</span><br>
+let pointer = { x: 0, y: 0, active: false };<br>
+canvas.addEventListener(<span class="highlight">'mousemove'</span>, e =&gt; {<br>
+&nbsp;&nbsp;pointer = { x: e.clientX, y: e.clientY, active: true };<br>
+});<br>
+canvas.addEventListener(<span class="highlight">'touchmove'</span>, e =&gt; {<br>
+&nbsp;&nbsp;e.preventDefault();<br>
+&nbsp;&nbsp;const t = e.touches[0];<br>
+&nbsp;&nbsp;pointer = { x: t.clientX, y: t.clientY, active: true };<br>
+}, { passive: false });<br>
+<br>
+<span class="comment">// --- Collision Detection ---</span><br>
+<span class="highlight">function circlesCollide</span>(a, b) {<br>
+&nbsp;&nbsp;const dx = a.x - b.x, dy = a.y - b.y;<br>
+&nbsp;&nbsp;const dist = Math.sqrt(dx * dx + dy * dy);<br>
+&nbsp;&nbsp;return dist &lt; a.size + b.size;<br>
+}<br>
+<br>
+<span class="comment">// --- Sound Effect ---</span><br>
+<span class="highlight">function playHit()</span> {<br>
+&nbsp;&nbsp;const ctx = new AudioContext();<br>
+&nbsp;&nbsp;const osc = ctx.createOscillator();<br>
+&nbsp;&nbsp;const gain = ctx.createGain();<br>
+&nbsp;&nbsp;osc.connect(gain); gain.connect(ctx.destination);<br>
+&nbsp;&nbsp;osc.frequency.setValueAtTime(520, ctx.currentTime);<br>
+&nbsp;&nbsp;osc.frequency.exponentialRampToValueAtTime(220, ctx.currentTime + 0.15);<br>
+&nbsp;&nbsp;gain.gain.setValueAtTime(0.4, ctx.currentTime);<br>
+&nbsp;&nbsp;gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.15);<br>
+&nbsp;&nbsp;osc.start(); osc.stop(ctx.currentTime + 0.15);<br>
+}<br>
+<br>
+<span class="comment">// --- Render Loop ---</span><br>
+<span class="highlight">function gameLoop()</span> {<br>
+&nbsp;&nbsp;if (!state.running) return;<br>
+&nbsp;&nbsp;ctx.fillStyle = <span class="highlight">'#1a1510'</span>;<br>
+&nbsp;&nbsp;ctx.fillRect(0, 0, canvas.width, canvas.height);<br>
+<br>
+&nbsp;&nbsp;<span class="comment">// Update player position toward pointer</span><br>
+&nbsp;&nbsp;if (pointer.active) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;state.player.x += (pointer.x - state.player.x) * 0.1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;state.player.y += (pointer.y - state.player.y) * 0.1;<br>
+&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;<span class="comment">// Draw player</span><br>
+&nbsp;&nbsp;ctx.fillStyle = <span class="highlight">'#f0a830'</span>;<br>
+&nbsp;&nbsp;ctx.beginPath();<br>
+&nbsp;&nbsp;ctx.arc(state.player.x, state.player.y, state.player.size, 0, Math.PI * 2);<br>
+&nbsp;&nbsp;ctx.fill();<br>
+<br>
+&nbsp;&nbsp;requestAnimationFrame(gameLoop);<br>
+}<br>
+gameLoop();
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ How to Use ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="reveal">How to Use</h2>
+    <p class="reveal">Four steps from template to working demo. The whole process takes less than an hour.</p>
+
+    <div class="reveal">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Copy the Template</h3>
+          <p>Pick the starter kit closest to your idea. Click the copy button or select the code and paste it into a new file. Save it as <code style="font-family: var(--mono); font-size: 13px; color: var(--amber); background: rgba(240,168,48,0.08); padding: 2px 8px; border-radius: 4px;">index.html</code> on your machine.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Open in Your Text Editor</h3>
+          <p>VS Code, Sublime Text, VibePad, or even Notepad. No IDE required. No extensions needed. Open the file, and you have everything in front of you &mdash; HTML, CSS, and JavaScript in one place.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Describe Your Movie Trailer to an AI Assistant</h3>
+          <p>Open Claude, ChatGPT, or your preferred AI assistant. Describe your &ldquo;movie trailer&rdquo; moment in one sentence. Paste in the starter template as context. Ask for a working implementation of your idea using that template as the foundation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Build Your Vertical Slice</h3>
+          <p>Iterate with the AI and your own edits. Test in the browser every 5 minutes. Add sound, motion, and touch interactions. When one complete user flow works end-to-end, you have your vertical slice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ What's NOT Included ============ -->
+<section class="content-section">
+  <div class="container">
+    <div class="callout orange reveal">
+      <p><strong>What&rsquo;s NOT included:</strong> No package.json. No node_modules. No webpack config. No .env files. No README longer than the code. These starters include exactly what you need and nothing you don&rsquo;t.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Link to Quick Start ============ -->
+<section class="content-section" style="border-bottom: none;">
+  <div class="container">
+    <h2 class="reveal">Ready to Build?</h2>
+    <p class="reveal">Follow the <a href="quick-start.html">Quick Start guide</a> to turn any of these templates into a working demo in under an hour. The guide walks you through defining your movie trailer moment, building the vertical slice, adding polish, and testing with a real person.</p>
+
+    <div class="pillar-nav reveal">
+      <a href="quick-start.html">
+        <span class="nav-label">&larr; Previous</span>
+        <span class="nav-title">Quick Start Guide</span>
+      </a>
+      <a href="connect.html" class="next">
+        <span class="nav-label">Next &rarr;</span>
+        <span class="nav-title">Connect</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://thomaslee.tech" target="_blank">thomaslee.tech</a>
+      <a href="https://linkedin.com/in/thomas-lee-dev" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/TommyLeeDev" target="_blank">X / Twitter</a>
+    </div>
+    <div>&copy; 2025 Thomas Lee</div>
+    <div class="footer-tagline">FluxForge is a development methodology, not a framework. That's the point.</div>
+  </div>
+</footer>
+
+<!-- ============ Scripts ============ -->
+<script>
+// Reveal-on-scroll animation
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 100);
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
+
+// Hamburger toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+// Close nav when clicking a link (mobile)
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+
+// Copy template functionality
+function copyTemplate(el) {
+  const codeBlock = el.closest('.code-block') || el;
+  const text = codeBlock.innerText.replace(/^\s*Copy\s*/, '').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = codeBlock.querySelector('.code-copy');
+    if (btn) {
+      btn.classList.add('copied');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy';
+      }, 2000);
+    }
+  });
+}
+</script>
+
+</body>
+</html>
