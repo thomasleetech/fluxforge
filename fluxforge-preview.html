@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FluxForge — Methodology Preview</title>
-<meta name="description" content="FluxForge rapid development methodology preview. Build Fast, Feel Real, Prove Outcomes, Harden Into Products. By Thomas Lee.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z' fill='%23f0a830'/%3E%3C/svg%3E">
+<title>FluxForge Preview — Rapid Development Methodology</title>
+<meta name="description" content="FluxForge methodology preview. Build Fast, Feel Real, Prove Outcomes, Harden Into Products. By Thomas Lee.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=&apos;http://www.w3.org/2000/svg&apos; viewBox=&apos;0 0 24 24&apos; fill=&apos;none&apos;%3E%3Cpath d=&apos;M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z&apos; fill=&apos;%23f0a830&apos;/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <style>
@@ -641,134 +641,226 @@ body::before {
 /* ---- Pill with icon ---- */
 .pill svg { width: 12px; height: 12px; vertical-align: -1px; margin-right: 2px; }
 
-/* ---- Preview Header ---- */
-.preview-header {
-  padding: 60px 0 40px;
-  text-align: center;
-  border-bottom: 3px solid var(--border);
-  background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-  position: relative;
-}
-.preview-header::after {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 60% at 50% 40%, rgba(44,104,128,0.06) 0%, transparent 60%),
-              radial-gradient(ellipse 40% 50% at 30% 70%, rgba(240,168,48,0.04) 0%, transparent 50%);
-  pointer-events: none;
-}
-.preview-header .container { position: relative; z-index: 1; }
-.preview-logo {
-  display: inline-flex; align-items: center; gap: 14px; margin-bottom: 20px;
-}
-.preview-logo-icon {
-  display: flex; align-items: center; justify-content: center;
-  color: var(--amber); filter: drop-shadow(0 0 8px rgba(240,168,48,0.5));
-}
-.preview-logo-text {
-  font-family: var(--mono); font-size: 18px; font-weight: 800; color: var(--amber);
-  letter-spacing: 0.16em; text-transform: uppercase;
-}
-.preview-label {
-  display: inline-block; padding: 4px 14px; border-radius: 20px;
-  font-family: var(--mono); font-size: 11px; font-weight: 700;
-  color: var(--teal2); background: rgba(90,152,152,0.1);
-  border: 1px solid rgba(90,152,152,0.25);
-  text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px;
-}
-.preview-tagline {
-  font-size: 15px; color: var(--text3); max-width: 440px; margin: 0 auto;
-}
-.preview-tagline a { color: var(--text3); border-bottom: 1px solid var(--border2); }
 
-/* Section dividers */
-.section-divider {
-  padding: 48px 0; text-align: center; border-bottom: 2px solid var(--border);
-  background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
-}
-.section-divider h2 {
-  font-family: var(--bitter); font-size: clamp(28px, 4vw, 38px);
-  font-weight: 900; color: var(--cream); margin-bottom: 8px;
-}
-.section-divider p {
-  font-size: 15px; color: var(--text3); max-width: 500px; margin: 0 auto;
-}
+  /* Case study detail cards */
+  .case-study {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .case-study:last-of-type { border-bottom: none; }
 
-/* Case study styles */
-.case-study { padding: 64px 0; border-bottom: 1px solid var(--border); }
-.case-study:last-of-type { border-bottom: none; }
-.case-study-header { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 24px; }
-.case-study-emoji { font-size: 48px; line-height: 1; flex-shrink: 0; }
-.case-study-meta { flex: 1; }
-.case-study-name { font-family: var(--bitter); font-size: clamp(24px, 3.5vw, 32px); font-weight: 800; line-height: 1.2; color: var(--cream); margin-bottom: 4px; }
-.case-study-tagline { font-size: 16px; color: var(--text2); line-height: 1.5; margin-bottom: 12px; }
-.case-study-timeline { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 10px; background: rgba(240,168,48,0.08); border: 1px solid rgba(240,168,48,0.15); font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--amber); margin-top: 8px; }
-.case-study-timeline svg { width: 14px; height: 14px; flex-shrink: 0; }
-.case-study-body { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
-@media (max-width: 700px) { .case-study-body { grid-template-columns: 1fr; } }
-.case-study-section { background: var(--bg3); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
-.case-study-section.full-width { grid-column: 1 / -1; }
-.case-study-section h4 { font-family: var(--mono); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-.case-study-section h4.problem-label { color: var(--orange2); }
-.case-study-section h4.build-label { color: var(--amber); }
-.case-study-section h4.outcome-label { color: var(--olive2); }
-.case-study-section p { font-size: 14px; color: var(--text2); line-height: 1.7; margin-bottom: 0; }
-.case-study-section p + p { margin-top: 10px; }
-.case-study-section .detail-label { font-family: var(--mono); font-size: 11px; color: var(--text3); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 14px; margin-bottom: 4px; }
-.case-study-section .detail-value { font-size: 13px; color: var(--text2); line-height: 1.5; }
+  .case-study-header {
+    display: flex; align-items: flex-start; gap: 20px;
+    margin-bottom: 24px;
+  }
+  .case-study-emoji {
+    font-size: 48px; line-height: 1; flex-shrink: 0;
+  }
+  .case-study-meta { flex: 1; }
+  .case-study-name {
+    font-family: var(--bitter); font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 800; line-height: 1.2; color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .case-study-tagline {
+    font-size: 16px; color: var(--text2); line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .case-study-timeline {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 16px; border-radius: 10px;
+    background: rgba(240,168,48,0.08); border: 1px solid rgba(240,168,48,0.15);
+    font-family: var(--mono); font-size: 12px; font-weight: 700;
+    color: var(--amber); margin-top: 8px;
+  }
+  .case-study-timeline svg {
+    width: 14px; height: 14px; flex-shrink: 0;
+  }
 
-/* Summary */
-.summary-section { padding: 80px 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); border-bottom: 2px solid var(--border); text-align: center; }
-.summary-label { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--amber); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; gap: 16px; }
-.summary-label::before, .summary-label::after { content: ''; width: 40px; height: 2px; background: linear-gradient(90deg, transparent, var(--amber), transparent); }
-.summary-text { font-size: 18px; color: var(--text2); line-height: 1.7; max-width: 640px; margin: 0 auto 32px; }
-.summary-text strong { color: var(--amber); }
-.category-grid { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 32px; }
-.category-pill { padding: 10px 20px; border-radius: 10px; font-family: var(--mono); font-size: 12px; font-weight: 700; transition: all 0.25s; cursor: default; }
-.category-pill:nth-child(1) { background: rgba(240,168,48,0.1); border: 1px solid rgba(240,168,48,0.2); color: var(--amber); }
-.category-pill:nth-child(2) { background: rgba(44,104,128,0.1); border: 1px solid rgba(44,104,128,0.2); color: var(--teal2); }
-.category-pill:nth-child(3) { background: rgba(212,90,40,0.1); border: 1px solid rgba(212,90,40,0.2); color: var(--orange2); }
-.category-pill:nth-child(4) { background: rgba(106,122,56,0.1); border: 1px solid rgba(106,122,56,0.2); color: var(--olive2); }
-.category-pill:nth-child(5) { background: rgba(184,56,40,0.1); border: 1px solid rgba(184,56,40,0.2); color: #e04838; }
-.category-pill:nth-child(6) { background: rgba(240,168,48,0.1); border: 1px solid rgba(240,168,48,0.2); color: var(--amber2); }
+  .case-study-body {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    margin-top: 24px;
+  }
+  @media (max-width: 700px) {
+    .case-study-body { grid-template-columns: 1fr; }
+  }
 
-/* Preview badge */
-.preview-badge {
-  position: fixed; bottom: 20px; right: 20px; z-index: 1000;
-  padding: 8px 18px; border-radius: 20px;
-  font-family: var(--mono); font-size: 11px; font-weight: 800;
-  color: var(--teal2); background: rgba(26,21,16,0.92);
-  border: 1px solid rgba(90,152,152,0.3);
-  backdrop-filter: blur(8px);
-  text-transform: uppercase; letter-spacing: 0.12em;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-}
+  .case-study-section {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px;
+  }
+  .case-study-section.full-width {
+    grid-column: 1 / -1;
+  }
+  .case-study-section h4 {
+    font-family: var(--mono); font-size: 11px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+  }
+  .case-study-section h4.problem-label { color: var(--orange2); }
+  .case-study-section h4.build-label { color: var(--amber); }
+  .case-study-section h4.outcome-label { color: var(--olive2); }
+  .case-study-section p {
+    font-size: 14px; color: var(--text2); line-height: 1.7;
+    margin-bottom: 0;
+  }
+  .case-study-section p + p {
+    margin-top: 10px;
+  }
+  .case-study-section .detail-label {
+    font-family: var(--mono); font-size: 11px; color: var(--text3);
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+    margin-top: 14px; margin-bottom: 4px;
+  }
+  .case-study-section .detail-value {
+    font-size: 13px; color: var(--text2); line-height: 1.5;
+  }
+
+  /* Section divider */
+  .case-study-divider {
+    width: 100%; height: 4px; border-radius: 2px;
+    background: linear-gradient(90deg, var(--amber), var(--orange), var(--teal));
+    opacity: 0.4;
+  }
+
+  /* Summary stats section */
+  .summary-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+    border-bottom: 2px solid var(--border);
+    text-align: center;
+  }
+  .summary-label {
+    font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--amber);
+    text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 40px;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  .summary-label::before, .summary-label::after {
+    content: ''; width: 40px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  }
+  .summary-text {
+    font-size: 18px; color: var(--text2); line-height: 1.7;
+    max-width: 640px; margin: 0 auto 32px;
+  }
+  .summary-text strong { color: var(--amber); }
+
+  .category-grid {
+    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  .category-pill {
+    padding: 10px 20px; border-radius: 10px; font-family: var(--mono);
+    font-size: 12px; font-weight: 700; transition: all 0.25s; cursor: default;
+  }
+  .category-pill:nth-child(1) { background: rgba(240,168,48,0.1); border: 1px solid rgba(240,168,48,0.2); color: var(--amber); }
+  .category-pill:nth-child(2) { background: rgba(44,104,128,0.1); border: 1px solid rgba(44,104,128,0.2); color: var(--teal2); }
+  .category-pill:nth-child(3) { background: rgba(212,90,40,0.1); border: 1px solid rgba(212,90,40,0.2); color: var(--orange2); }
+  .category-pill:nth-child(4) { background: rgba(106,122,56,0.1); border: 1px solid rgba(106,122,56,0.2); color: var(--olive2); }
+  .category-pill:nth-child(5) { background: rgba(184,56,40,0.1); border: 1px solid rgba(184,56,40,0.2); color: #e04838; }
+  .category-pill:nth-child(6) { background: rgba(240,168,48,0.1); border: 1px solid rgba(240,168,48,0.2); color: var(--amber2); }
+  .category-pill:hover { transform: translateY(-2px); filter: brightness(1.2); }
+
+  /* Preview header */
+  .preview-header {
+    padding: 80px 0 48px;
+    border-bottom: 2px solid var(--border);
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative;
+    text-align: center;
+  }
+  .preview-header::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 40%, rgba(44,104,128,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 50% at 30% 70%, rgba(240,168,48,0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .preview-header .container { position: relative; z-index: 1; }
+  .preview-header .logo-icon {
+    display: inline-flex; color: var(--amber);
+    filter: drop-shadow(0 0 12px rgba(240,168,48,0.4));
+    margin-bottom: 16px;
+  }
+  .preview-header .logo-icon svg { width: 56px; height: 56px; }
+  .preview-header h1 {
+    font-family: var(--bitter); font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900; line-height: 1.1; letter-spacing: -0.02em;
+    margin-bottom: 8px; color: var(--cream);
+  }
+  .preview-header .preview-pill {
+    display: inline-block; padding: 6px 18px; border-radius: 20px;
+    background: rgba(240,168,48,0.1); border: 1px solid rgba(240,168,48,0.25);
+    font-family: var(--mono); font-size: 11px; font-weight: 800;
+    color: var(--amber); text-transform: uppercase; letter-spacing: 0.14em;
+    margin-bottom: 16px;
+  }
+  .preview-header .author-note {
+    font-size: 14px; color: var(--text3); font-style: italic;
+  }
+  .preview-header .author-note a { color: var(--teal2); }
+
+  /* Section dividers for the preview */
+  .preview-section-title {
+    padding: 48px 0 0;
+    text-align: center;
+  }
+  .preview-section-title h2 {
+    font-family: var(--mono); font-size: 13px; font-weight: 800;
+    color: var(--amber); text-transform: uppercase; letter-spacing: 0.14em;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    margin-bottom: 0;
+  }
+  .preview-section-title h2::before, .preview-section-title h2::after {
+    content: ''; width: 40px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  }
+
+  /* Preview watermark pill */
+  .preview-watermark {
+    position: fixed; bottom: 20px; right: 20px; z-index: 9998;
+    padding: 8px 18px; border-radius: 20px;
+    background: rgba(26,21,16,0.9); border: 1px solid rgba(240,168,48,0.3);
+    backdrop-filter: blur(8px);
+    font-family: var(--mono); font-size: 11px; font-weight: 800;
+    color: var(--amber); text-transform: uppercase; letter-spacing: 0.12em;
+    opacity: 0.7; transition: opacity 0.2s;
+    pointer-events: none;
+  }
+
+  /* Preview footer */
+  .preview-footer {
+    padding: 36px 0; border-top: 2px solid var(--border);
+    text-align: center; font-size: 13px; color: var(--text4);
+  }
+  .preview-footer a { color: var(--text3); }
+  .preview-footer a:hover { color: var(--amber); }
 </style>
 </head>
 <body>
 
-<!-- Preview Badge -->
-<div class="preview-badge">Preview</div>
+<!-- Preview Watermark -->
+<div class="preview-watermark">Preview</div>
 
 <!-- ============ Preview Header ============ -->
-<div class="preview-header">
+<header class="preview-header">
   <div class="container">
-    <div class="preview-logo">
-      <div class="preview-logo-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg></div>
-      <div class="preview-logo-text">FluxForge</div>
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg>
     </div>
-    <div><span class="preview-label">Methodology Preview</span></div>
-    <p class="preview-tagline">A rapid development methodology by Thomas Lee &mdash; <a href="https://thomaslee.tech" target="_blank">thomaslee.tech</a></p>
+    <h1>FluxForge</h1>
+    <div class="preview-pill">Preview</div>
+    <p class="author-note">A rapid development methodology by Thomas Lee &mdash; <a href="https://thomaslee.tech" target="_blank">thomaslee.tech</a></p>
   </div>
-</div>
+</header>
 
 <!-- ============ SECTION 1: The Methodology ============ -->
-<div class="section-divider">
+<div class="preview-section-title">
   <div class="container">
-    <h2>The <span style="color: var(--amber);">Methodology</span></h2>
-    <p>Why traditional development processes fail &mdash; and what replaces them.</p>
+    <h2>Section 1 &mdash; The Methodology</h2>
   </div>
 </div>
 
-<!-- Manifesto -->
+<!-- ============ The Problem / Manifesto ============ -->
 <section class="content-section manifesto-section">
   <div class="container">
     <h2 class="reveal">The Industry Sold You a Process. You Needed a Product.</h2>
@@ -868,7 +960,7 @@ body::before {
   </div>
 </section>
 
-<!-- Core Loop -->
+<!-- ============ The Core Loop ============ -->
 <section class="content-section">
   <div class="container">
     <h2 class="reveal">The Core Loop</h2>
@@ -941,7 +1033,7 @@ body::before {
   </div>
 </section>
 
-<!-- Core Principles -->
+<!-- ============ Core Principles ============ -->
 <section class="content-section">
   <div class="container">
     <h2 class="reveal">Core Principles</h2>
@@ -986,12 +1078,18 @@ body::before {
 </section>
 
 <!-- ============ SECTION 2: Case Studies ============ -->
-<div class="section-divider">
+<div class="preview-section-title">
   <div class="container">
-    <h2>Built with <span style="color: var(--amber);">FluxForge</span></h2>
-    <p>Real projects demonstrating the methodology in action.</p>
+    <h2>Section 2 &mdash; Case Studies</h2>
   </div>
 </div>
+
+<section class="content-section" style="border-bottom: none; padding-bottom: 0;">
+  <div class="container">
+    <h2 class="reveal">Built with <span class="text-amber">FluxForge</span></h2>
+    <p class="reveal">Real projects demonstrating the methodology in action. Each one went from idea to working demo using the Build &rarr; Feel &rarr; Prove &rarr; Harden loop.</p>
+  </div>
+</section>
 
 <!-- Case Study 1: CallCapture -->
 <div class="case-study">
@@ -1020,16 +1118,21 @@ body::before {
     <div class="case-study-body reveal">
       <div class="case-study-section">
         <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
-        <p>QA teams working on enterprise voice bots had no systematic way to test conversations. They were manually calling their own bots, scribbling notes, and filing issues in spreadsheets. Every test was unrepeatable, unrecorded, and unstructured.</p>
+        <p>QA teams working on enterprise voice bots had no systematic way to test conversations. They were manually calling their own bots, scribbling notes, and filing issues in spreadsheets. Every test was unrepeatable, unrecorded, and unstructured. They needed a tool that could initiate calls, capture transcripts in real time, and log issues directly against specific moments in the conversation.</p>
       </div>
+
       <div class="case-study-section">
         <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
-        <p>A fully functional call analysis platform with real-time transcription, conversation playback, and an issue tracking dashboard. Used by enterprise voice AI teams to systematically validate bot behavior across hundreds of scenarios.</p>
+        <p>A fully functional call analysis platform with real-time transcription, conversation playback, and an issue tracking dashboard. QA teams could initiate test calls, watch transcripts appear live, flag problems inline, and export structured reports. Used by enterprise voice AI teams to systematically validate bot behavior across hundreds of scenarios.</p>
+        <p>Demonstrates FluxForge's ability to integrate complex real-time systems (WebRTC, speech-to-text, live UI updates) into a cohesive product in days, not months.</p>
       </div>
+
       <div class="case-study-section full-width">
         <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Watching a live call transcript appear word-by-word in real time, synchronized with the actual conversation as it happens.</div>
+        <div class="detail-label">Vertical Slice</div>
+        <div class="detail-value">Initiate call &rarr; connect via WebRTC &rarr; stream audio to Whisper &rarr; display real-time transcript &rarr; log issues against transcript segments.</div>
         <div class="detail-label">Stack</div>
         <div class="detail-value">PHP backend, WebRTC for call handling, OpenAI Whisper for transcription, vanilla JavaScript frontend with live-updating DOM.</div>
       </div>
@@ -1064,16 +1167,21 @@ body::before {
     <div class="case-study-body reveal">
       <div class="case-study-section">
         <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
-        <p>The prevailing wisdom says you need React or Vue to build anything complex on the web. VibePad was born to disprove that. The challenge: build a fully featured, IDE-like code editor using nothing but vanilla JavaScript.</p>
+        <p>The prevailing wisdom says you need React or Vue to build anything complex on the web. VibePad was born to disprove that. The challenge: build a fully featured, IDE-like code editor &mdash; syntax highlighting, live preview, theme engine, multi-file support &mdash; using nothing but vanilla JavaScript. No build tools, no bundlers, no framework tax.</p>
       </div>
+
       <div class="case-study-section">
         <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
-        <p>A complete code editor with syntax highlighting, custom theme engine, Canvas-powered minimap, code intelligence, multi-file support, and live preview. All running as a single HTML file with zero dependencies. The definitive proof of the FluxForge "zero frameworks" principle at scale.</p>
+        <p>A complete code editor with syntax highlighting for multiple languages, a custom theme engine with dark and light modes, Canvas-powered minimap, code intelligence features, multi-file project support, and integrated live preview. All running as a single HTML file with zero dependencies.</p>
+        <p>VibePad is the definitive proof of the FluxForge "zero frameworks" principle at scale. It shows that vanilla JS isn't just viable for complex applications &mdash; it's often faster to build with, easier to debug, and lighter to ship.</p>
       </div>
+
       <div class="case-study-section full-width">
         <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Opening the editor, pasting in code, and watching syntax highlighting + live preview render instantly &mdash; all powered by zero external libraries.</div>
+        <div class="detail-label">Vertical Slice</div>
+        <div class="detail-value">Text input &rarr; real-time syntax highlighting &rarr; live preview panel &rarr; file save/load &rarr; theme switching.</div>
         <div class="detail-label">Stack</div>
         <div class="detail-value">Pure vanilla JavaScript, Canvas API for minimap rendering, custom tokenizer for syntax highlighting, custom CSS-in-JS theme engine &mdash; all hand-rolled.</div>
       </div>
@@ -1108,18 +1216,23 @@ body::before {
     <div class="case-study-body reveal">
       <div class="case-study-section">
         <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
-        <p>Can you make a gesture-controlled game that actually feels good to play? Can hand tracking be responsive and accurate enough for a game that requires fine motor control, like pool?</p>
+        <p>Gesture-based gaming has always felt gimmicky. The Wii waggle, the Kinect dance &mdash; fun as novelties, but the controls never felt precise or responsive enough for a skill-based game. The question: can you make a gesture-controlled game that actually feels good to play? Can hand tracking be responsive and accurate enough for a game that requires fine motor control, like pool?</p>
       </div>
+
       <div class="case-study-section">
         <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
-        <p>A fully playable billiards game controlled entirely by hand gestures via a webcam. Realistic ball physics, pocket detection, and satisfying collision sounds. Projection-ready for use on real pool tables. Demonstrates the "Feel Real" pillar in its purest form.</p>
+        <p>A fully playable billiards game controlled entirely by hand gestures via a webcam. Smooth hand tracking maps your real hand position to a virtual cue stick. Realistic ball physics, pocket detection, and satisfying collision sounds. Projection-ready for use on real pool tables &mdash; turning any surface into an interactive game.</p>
+        <p>Demonstrates the "Feel Real" pillar in its purest form: responsive, tactile interaction that makes technology disappear behind the experience.</p>
       </div>
+
       <div class="case-study-section full-width">
         <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Seeing your hand tracked on screen, pulling back a virtual cue stick, and watching the ball roll across the table with realistic physics.</div>
+        <div class="detail-label">Vertical Slice</div>
+        <div class="detail-value">Camera feed &rarr; MediaPipe hand detection &rarr; cue stick angle/power rendering &rarr; ball physics simulation &rarr; pocket detection &rarr; score tracking.</div>
         <div class="detail-label">Stack</div>
-        <div class="detail-value">MediaPipe Hands for tracking, Canvas 2D for rendering, custom physics engine for ball collisions, vanilla JavaScript for game logic.</div>
+        <div class="detail-value">MediaPipe Hands for tracking, Canvas 2D for rendering, custom physics engine for ball collisions and momentum, vanilla JavaScript for game logic.</div>
       </div>
     </div>
   </div>
@@ -1152,16 +1265,21 @@ body::before {
     <div class="case-study-body reveal">
       <div class="case-study-section">
         <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
-        <p>Robocalls waste billions of hours of human time every year. Instead of blocking the call, what if you answered it &mdash; with an AI specifically designed to waste the scammer's time?</p>
+        <p>Robocalls waste billions of hours of human time every year. Call blockers help, but scammers adapt. TimeVampire flips the script: instead of blocking the call, what if you answered it &mdash; with an AI that's specifically designed to waste the scammer's time? Keep them engaged, string them along, and make every minute they spend on your AI one less minute they spend scamming a real person.</p>
       </div>
+
       <div class="case-study-section">
         <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
-        <p>A working spam interceptor that picks up incoming calls, detects likely spam, and engages the caller with an AI personality. Multiple AI personalities available for variety. Demonstrates FluxForge's ability to rapidly integrate multiple AI APIs into a cohesive real-time system.</p>
+        <p>A working spam interceptor that picks up incoming calls, detects likely spam, and engages the caller with an AI personality. The AI generates natural conversational responses, asks clarifying questions, pretends to look for its "credit card," and generally keeps scammers on the line for as long as possible. Multiple AI personalities available for variety.</p>
+        <p>Demonstrates FluxForge's ability to rapidly integrate multiple AI APIs (speech-to-text, language model, text-to-speech, telephony) into a cohesive real-time system.</p>
       </div>
+
       <div class="case-study-section full-width">
         <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">A scammer calls in, the AI picks up with a friendly "Hello?", and a five-minute conversation unfolds where the scammer never realizes they're talking to a machine.</div>
+        <div class="detail-label">Vertical Slice</div>
+        <div class="detail-value">Incoming call via Twilio &rarr; AI picks up &rarr; speech-to-text transcription &rarr; OpenAI generates conversational response &rarr; ElevenLabs speaks the response &rarr; loop continues until scammer hangs up.</div>
         <div class="detail-label">Stack</div>
         <div class="detail-value">Twilio for telephony, OpenAI for conversation generation, ElevenLabs for realistic text-to-speech, PHP backend orchestrating the real-time loop.</div>
       </div>
@@ -1196,18 +1314,23 @@ body::before {
     <div class="case-study-body reveal">
       <div class="case-study-section">
         <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
-        <p>Can you make bowling feel physical using just a webcam? No special controllers, no motion sensors &mdash; just your arm, a camera, and a browser.</p>
+        <p>Can you make bowling feel physical using just a webcam? No special controllers, no motion sensors &mdash; just your arm, a camera, and a browser. The challenge is mapping the full arc of a bowling throw (approach, backswing, release, follow-through) to gesture data and translating that into satisfying pin-smashing physics.</p>
       </div>
+
       <div class="case-study-section">
         <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
-        <p>An arcade-style bowling game controlled entirely by arm gestures. The camera tracks your arm swing, detects the release point, calculates velocity and angle, and launches the ball down the lane. Realistic pin collision physics and satisfying sound design make every strike feel tangible.</p>
+        <p>An arcade-style bowling game controlled entirely by arm gestures. The camera tracks your arm swing, detects the release point, calculates velocity and angle, and launches the ball down the lane. Realistic pin collision physics, lane animations, and satisfying sound design make every strike feel tangible and rewarding.</p>
+        <p>Proves that the "Feel Real" pillar extends beyond visual polish &mdash; sound, physics, and responsiveness combine to create a genuinely physical-feeling digital experience.</p>
       </div>
+
       <div class="case-study-section full-width">
         <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Swinging your arm in front of the webcam and watching the bowling ball roll down the lane, curving with your wrist angle, and crashing into pins with full physics.</div>
+        <div class="detail-label">Vertical Slice</div>
+        <div class="detail-value">Camera feed &rarr; MediaPipe arm/hand gesture detection &rarr; release point calculation &rarr; ball trajectory with spin &rarr; pin collision physics &rarr; score display.</div>
         <div class="detail-label">Stack</div>
-        <div class="detail-value">MediaPipe for gesture tracking, Canvas/WebGL for rendering, custom physics simulation, Web Audio API for sound design.</div>
+        <div class="detail-value">MediaPipe for gesture tracking, Canvas/WebGL for lane and pin rendering, custom physics simulation for pin collisions, Web Audio API for sound design.</div>
       </div>
     </div>
   </div>
@@ -1240,16 +1363,21 @@ body::before {
     <div class="case-study-body reveal">
       <div class="case-study-section">
         <h4 class="problem-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> The Problem</h4>
-        <p>You've built a prototype and want to share it with beta testers. But you don't need full auth yet. You just need a gate: give someone a code, they get in. Simple, secure, deployable in minutes.</p>
+        <p>You've built a prototype and you want to share it with a small group of beta testers. But you don't need a full auth system yet &mdash; no sign-up flows, no password resets, no OAuth integrations. You just need a gate: give someone a code, they get in. Simple, secure, and deployable in minutes. Every FluxForge project that reaches the "Prove Outcomes" phase needs this, and building it fresh each time is wasteful.</p>
       </div>
+
       <div class="case-study-section">
         <h4 class="outcome-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> The Outcome</h4>
-        <p>A single-file, drop-in access control system. Generate invite codes, set usage limits and expiry dates, gate any page behind a clean code-entry UI. Now reused across multiple FluxForge projects. Demonstrates the "Harden" pillar perfectly.</p>
+        <p>A single-file, drop-in access control system. Generate invite codes, set usage limits and expiry dates, and gate any page or application behind a clean code-entry UI. Session-based access persists so users don't need to re-enter codes. Admin dashboard shows which codes are active, how many times each has been used, and when they expire.</p>
+        <p>Now reused across multiple FluxForge projects. Demonstrates the "Harden" pillar perfectly: simple security that works, deployed in minutes, and battle-tested across dozens of applications.</p>
       </div>
+
       <div class="case-study-section full-width">
         <h4 class="build-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.63c-.28.34-.04.87.42.87H11l-1 8 8.91-10.63c.28-.34.04-.87-.42-.87H13l1-8z" fill="currentColor"/></svg> The Build</h4>
         <div class="detail-label">Movie Trailer Moment</div>
         <div class="detail-value">Entering an invite code on a clean, minimal gate page and being instantly redirected to the protected application &mdash; the entire experience taking under two seconds.</div>
+        <div class="detail-label">Vertical Slice</div>
+        <div class="detail-value">Code input &rarr; server-side validation &rarr; session creation &rarr; redirect to protected content &rarr; admin code management dashboard.</div>
         <div class="detail-label">Stack</div>
         <div class="detail-value">PHP single-file deployment, MySQL for code storage and usage tracking, vanilla JS for the gate UI. No dependencies, no build step.</div>
       </div>
@@ -1296,15 +1424,16 @@ body::before {
   </div>
 </div>
 
-<!-- Footer -->
-<footer class="site-footer">
+<!-- ============ Preview Footer ============ -->
+<footer class="preview-footer">
   <div class="container">
-    <div>&copy; 2025 Thomas Lee &nbsp;|&nbsp; thomaslee.tech &nbsp;|&nbsp; This is a preview &mdash; full documentation available upon request.</div>
+    <div>&copy; 2025 Thomas Lee | <a href="https://thomaslee.tech" target="_blank">thomaslee.tech</a> | This is a preview &mdash; full documentation available upon request.</div>
   </div>
 </footer>
 
+<!-- ============ Scripts ============ -->
 <script>
-// Reveal animation on scroll
+// Reveal-on-scroll animation
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => {
@@ -1322,11 +1451,14 @@ document.querySelectorAll('[data-count]').forEach(el => {
     if (entries[0].isIntersecting) {
       const target = parseInt(el.dataset.count);
       const suffix = el.dataset.suffix || '';
+      const duration = 1200;
       const start = performance.now();
       (function tick(now) {
-        const p = Math.min((now - start) / 1200, 1);
-        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
-        if (p < 1) requestAnimationFrame(tick);
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
       })(start);
       io.unobserve(el);
     }
