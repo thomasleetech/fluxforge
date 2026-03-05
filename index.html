@@ -72,6 +72,20 @@
   }
   .hero-sub a { border-bottom: 1px solid rgba(240,168,48,0.3); transition: border-color 0.2s; }
   .hero-sub a:hover { border-color: var(--amber); }
+  .hero-sub-line {
+    position: absolute; top: 0; left: 0; right: 0;
+    opacity: 0; transform: translateY(8px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    font-size: 19px; color: var(--text2); line-height: 1.65;
+    margin: 0;
+  }
+  .hero-sub-line.active {
+    opacity: 1; transform: translateY(0);
+    position: relative;
+  }
+  .hero-sub-line.exiting {
+    opacity: 0; transform: translateY(-8px);
+  }
 
   .hero-stats {
     display: flex; justify-content: center; gap: 48px; margin-bottom: 50px;
@@ -256,9 +270,11 @@
       <span class="accent">Ship Real.</span><br>
       <span class="thin">No Bloat.</span>
     </h1>
-    <p class="hero-sub">
-      Agile promised to fix how we build software. It didn't. FluxForge is the methodology that actually delivers &mdash; ideas to production-quality applications at unprecedented speed. No sprints. No ceremonies. Just results. Created by <a href="https://thomaslee.tech" target="_blank">Thomas Lee</a>.
-    </p>
+    <div class="hero-sub" style="position: relative; min-height: 5.5em;">
+      <p class="hero-sub-line active">The industry spent decades perfecting how to have meetings about software. FluxForge builds it instead. Ideas to production at unprecedented speed. No sprints. No ceremonies, just results. Created by <a href="https://thomaslee.tech" target="_blank">Thomas Lee</a>.</p>
+      <p class="hero-sub-line">Most development methodologies slow you down. FluxForge doesn't. Ideas to production-quality apps at unprecedented speed &mdash; no sprints, no ceremonies, just results. Created by <a href="https://thomaslee.tech" target="_blank">Thomas Lee</a>.</p>
+      <p class="hero-sub-line">Stop planning. Start shipping. FluxForge delivers production-quality applications at unprecedented speed &mdash; no sprints, no ceremonies, just results. Created by <a href="https://thomaslee.tech" target="_blank">Thomas Lee</a>.</p>
+    </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="hero-stat-num" data-count="200" data-suffix="+">0</div><div class="hero-stat-label">Apps Built</div></div>
       <div class="hero-stat"><div class="hero-stat-num" data-count="9">0</div><div class="hero-stat-label">Months</div></div>
@@ -416,6 +432,22 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 const statsEl = document.querySelector('.hero-stats');
 if (statsEl) counterObserver.observe(statsEl);
+
+// Rotating hero subtitle
+const subLines = document.querySelectorAll('.hero-sub-line');
+if (subLines.length > 1) {
+  let current = 0;
+  setInterval(() => {
+    const prev = current;
+    current = (current + 1) % subLines.length;
+    subLines[prev].classList.add('exiting');
+    subLines[prev].classList.remove('active');
+    setTimeout(() => {
+      subLines[prev].classList.remove('exiting');
+      subLines[current].classList.add('active');
+    }, 600);
+  }, 6000);
+}
 </script>
 
 </body>
